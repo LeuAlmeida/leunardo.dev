@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <Wrapper>
       <Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
-      <Navbar />
+      <Navbar style={{ position: 'fixed' }} />
       <Hamburger sidebar={sidebar} toggle={toggle} />
       <Sidebar sidebar={sidebar} toggle={toggle} />
     </Wrapper>

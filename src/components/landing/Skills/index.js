@@ -5,7 +5,7 @@ import dev from 'assets/illustrations/skills.svg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
 export const Skills = () => (
-  <Wrapper id="about">
+  <Wrapper id="portfolio">
     <SkillsWrapper as={Container}>
       <Thumbnail>
         <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />

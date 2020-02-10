@@ -6,7 +6,7 @@ import dev from 'assets/illustrations/dev.svg';
 import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
 
 export const Intro = () => (
-  <Wrapper>
+  <Wrapper id="about">
     <Header />
     <IntroWrapper as={Container}>
       <Details>
