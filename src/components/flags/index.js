@@ -1,13 +1,13 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Menu } from './styles';
 
 import './style.css';
 
 function FloatMenu() {
   return (
     <>
-      <nav className="menu">
+      <Menu>
         <input type="checkbox" href="#" className="menu-open" name="menu-open" id="menu-open" />
         <label className="menu-open-button" htmlFor="menu-open">
           <span className="hamburger hamburger-1"></span>
@@ -35,8 +35,8 @@ function FloatMenu() {
           {' '}
           <i className="fa fa-cog"></i>{' '}
         </a>
-      </nav>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      </Menu>
+      <svg xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute' }} version="1.1">
         <defs>
           <filter id="shadowed-goo">
             <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
