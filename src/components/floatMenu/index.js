@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Menu } from './styles';
 
-import './style.css';
-
 function FloatMenu() {
   return (
     <>
