@@ -4,6 +4,7 @@ import { Header } from 'components/theme';
 import { Container, ButtonIcon } from 'components/common';
 import dev from 'assets/illustrations/dev.svg';
 import { FaGithub, FaBehance } from 'react-icons/fa';
+import ReactTypingEffect from 'react-typing-effect';
 import { Wrapper, IntroWrapper, Details, Thumbnail, SocialIcons } from './styles';
 
 export const Intro = () => (
@@ -11,8 +12,16 @@ export const Intro = () => (
     <Header />
     <IntroWrapper as={Container}>
       <Details>
-        <h1>Léu Almeida</h1>
-        <h4>Front-End Developer, UX & UI Designer</h4>
+        <h1>Hello, I'm Léu Almeida</h1>
+        <h4>
+          I am a{' '}
+          <ReactTypingEffect
+            text={['Frontend Dev', 'Backend Dev', 'UX and UI Designer']}
+            speed="100"
+            typingDelay="1000"
+            eraseDelay="3000"
+          />
+        </h4>
         <SocialIcons>
           <ButtonIcon as={AnchorLink} href="#contact">
             <FaGithub color="#FFF" size={18} />
