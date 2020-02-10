@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'components/common';
+import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
 import { Wrapper, Flex, Links, Details } from './styles';
-import social from './social.json';
 
 export const Footer = () => (
   <Wrapper>
@@ -13,18 +13,35 @@ export const Footer = () => (
           <span aria-label="love" role="img">
             💖
           </span>{' '}
+          and{' '}
+          <span aria-label="love" role="img">
+            ☕
+          </span>{' '}
           by{' '}
           <a href="https://smakosh.com/?ref=portfolio-dev" rel="noopener noreferrer" target="_blank">
-            Smakosh
+            Léu Almeida
           </a>
         </span>
       </Details>
       <Links>
-        {social.map(({ id, name, link, icon }) => (
-          <a key={id} href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>
-            <img width="24" src={icon} alt={name} />
-          </a>
-        ))}
+        <a href="https://github.com/LeuAlmeida" target="_blank" rel="noopener noreferrer">
+          <FaGithub color="#000" size={16} />
+        </a>
+        <a href="https://www.behance.net/almeida99" target="_blank" rel="noopener noreferrer">
+          <FaBehance color="#000" size={16} />
+        </a>
+        <a href="https://www.linkedin.com/in/leonardoalmeida99/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin color="#000" size={16} />
+        </a>
+        <a href="https://www.instagram.com/1bigo/" target="_blank" rel="noopener noreferrer">
+          <FaInstagram color="#000" size={16} />
+        </a>
+        <a href="https://www.facebook.com/leuzinhopataty" target="_blank" rel="noopener noreferrer">
+          <FaFacebookF color="#000" size={16} />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <FaFilePdf color="#000" size={16} />
+        </a>
       </Links>
     </Flex>
   </Wrapper>
