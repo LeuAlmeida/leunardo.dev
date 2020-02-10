@@ -3,7 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Header } from 'components/theme';
 import { Container, ButtonIcon } from 'components/common';
 import dev from 'assets/illustrations/dev.svg';
-import { FaGithub, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
 import ReactTypingEffect from 'react-typing-effect';
 import { Wrapper, IntroWrapper, Details, Thumbnail, SocialIcons } from './styles';
 
@@ -16,18 +16,31 @@ export const Intro = () => (
         <h4>
           I am a{' '}
           <ReactTypingEffect
-            text={['Frontend Dev', 'Backend Dev', 'UX and UI Designer']}
+            text={['Frontend Dev', 'Backend Dev', 'UX & UI Designer']}
             speed="100"
             typingDelay="1000"
             eraseDelay="3000"
           />
         </h4>
+        <h6>Stalk me:</h6>
         <SocialIcons>
           <ButtonIcon as={AnchorLink} href="#contact">
             <FaGithub color="#FFF" size={18} />
           </ButtonIcon>
           <ButtonIcon as={AnchorLink} href="#contact">
             <FaBehance color="#FFF" size={18} />
+          </ButtonIcon>
+          <ButtonIcon as={AnchorLink} href="#contact">
+            <FaLinkedin color="#FFF" size={18} />
+          </ButtonIcon>
+          <ButtonIcon as={AnchorLink} href="#contact">
+            <FaInstagram color="#FFF" size={18} />
+          </ButtonIcon>
+          <ButtonIcon as={AnchorLink} href="#contact">
+            <FaFacebookF color="#FFF" size={18} />
+          </ButtonIcon>
+          <ButtonIcon as={AnchorLink} href="#contact">
+            <FaFilePdf color="#FFF" size={18} />
           </ButtonIcon>
         </SocialIcons>
       </Details>
