@@ -9,8 +9,8 @@ export default () => (
     <FloatMenu />
     <Intro />
     <Projects />
-    <Skills />
     <Portfolio />
+    <Skills />
     <Contact />
   </Layout>
 );
