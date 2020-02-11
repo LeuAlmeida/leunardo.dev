@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Menu = styled.nav`
   -webkit-filter: url('#shadowed-goo');
   filter: url('#shadowed-goo');
+  z-index: 99999;
 
   position: fixed;
   bottom: 0;
