@@ -1,31 +1,51 @@
 import React from 'react';
 
+import { FaGithub, FaBehance, FaGlobe, FaPlay } from 'react-icons/fa';
+
 import { Grid } from './styles';
 
-function ImagePortfolio() {
+function ImagePortfolio({ image, name, boldName, description, github, behance, url, video }) {
   return (
     <div className="content">
       <Grid>
         <figure className="effect-zoe">
-          <img src="https://tympanus.net/Development/HoverEffectIdeas/img/25.jpg" alt="img25" />
+          <img src={image} alt={`${name} ${boldName || ''}`} />
           <figcaption>
             <h2>
-              Creative <span>Zoe</span>
+              {name}
+              <span>{boldName}</span>
             </h2>
             <p className="icon-links">
-              <a href="#">
-                <span className="icon-heart"></span>
-              </a>
-              <a href="#">
-                <span className="icon-eye"></span>
-              </a>
-              <a href="#">
-                <span className="icon-paper-clip"></span>
-              </a>
+              {github ? (
+                <a href={github}>
+                  <FaGithub size={18} color="#000" style={{ marginRight: 5 }} />
+                </a>
+              ) : (
+                ''
+              )}
+              {behance ? (
+                <a href={behance}>
+                  <FaBehance size={18} color="#000" style={{ marginRight: 5 }} />
+                </a>
+              ) : (
+                ''
+              )}
+              {url ? (
+                <a href={url}>
+                  <FaGlobe size={18} color="#000" style={{ marginRight: 5 }} />
+                </a>
+              ) : (
+                ''
+              )}
+              {video ? (
+                <a href={video}>
+                  <FaPlay size={18} color="#000" style={{ marginRight: 5 }} />
+                </a>
+              ) : (
+                ''
+              )}
             </p>
-            <p className="description">
-              Zoe never had the patience of her sisters. She deliberately punched the bear in his face.
-            </p>
+            {description ? <p className="description">{description}</p> : ''}
           </figcaption>
         </figure>
       </Grid>
