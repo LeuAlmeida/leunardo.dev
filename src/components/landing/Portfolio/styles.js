@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
@@ -8,7 +8,6 @@ export const FilterWrapper = styled.div`
 `;
 
 export const FilterItem = styled.li`
-  color: #7178fc;
   background: transparent;
   list-style: none;
   border: 0;
@@ -17,6 +16,7 @@ export const FilterItem = styled.li`
   font-weight: bold;
   margin: 0 10px;
 
+  color: ${props => (props.active ? '#7178fc' : '#666')};
   &:before {
     content: '';
     margin-bottom: 4px;
@@ -24,8 +24,16 @@ export const FilterItem = styled.li`
     width: 100%;
     height: 5px;
     border-radius: 10px;
-    background: #7178fc;
+    background: transparent;
   }
+
+  ${props =>
+    props.active &&
+    css`
+      &:before {
+        background: #7178fc;
+      }
+    `}
 `;
 
 export const Container = styled.div`
