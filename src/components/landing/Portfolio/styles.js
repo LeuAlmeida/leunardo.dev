@@ -1,10 +1,29 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const FilterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+`;
+
+const bounceIn = keyframes`
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
 `;
 
 export const FilterItem = styled.li`
@@ -31,6 +50,10 @@ export const FilterItem = styled.li`
     props.active &&
     css`
       &:before {
+        animation-name: ${bounceIn};
+        animation-duration: 450ms;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
         background: #7178fc;
       }
     `}
