@@ -2,12 +2,14 @@ import React from 'react';
 
 import { Container, Grid } from './styles';
 
+import ImagePortfolio from '../../common/ImagePortfolio';
+
 export const Portfolio = () => (
   <Container>
     <Grid>
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
+      <ImagePortfolio />
+      <ImagePortfolio />
+      <ImagePortfolio />
     </Grid>
   </Container>
 );
