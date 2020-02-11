@@ -2,6 +2,8 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import { FaGithub, FaBehance, FaGlobe, FaPlay } from 'react-icons/fa';
 
+import PropTypes from 'prop-types';
+
 import { Grid } from './styles';
 
 function ImagePortfolio({ image, name, boldName, description, github, behance, url, video }) {
@@ -65,5 +67,16 @@ function ImagePortfolio({ image, name, boldName, description, github, behance, u
     </div>
   );
 }
+
+ImagePortfolio.propTypes = {
+  image: PropTypes.shape,
+  name: PropTypes.string,
+  boldName: PropTypes.string,
+  description: PropTypes.string,
+  github: PropTypes.string,
+  behance: PropTypes.string,
+  url: PropTypes.string,
+  video: PropTypes.string,
+};
 
 export default ImagePortfolio;
