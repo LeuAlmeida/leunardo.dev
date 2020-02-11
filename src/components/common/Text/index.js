@@ -5,6 +5,7 @@ export const TitleWrapper = styled.div`
   flex-direction: column;
   padding-left: 10%;
   width: 200px;
+  align-self: flex-start;
 `;
 
 export const H2 = styled.h2`
