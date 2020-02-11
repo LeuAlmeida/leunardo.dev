@@ -1,5 +1,33 @@
 import styled from 'styled-components';
 
+export const FilterWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const FilterItem = styled.li`
+  color: #7178fc;
+  background: transparent;
+  list-style: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+
+  &:before {
+    content: '';
+    margin-bottom: 4px;
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background: #7178fc;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
