@@ -1,5 +1,24 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 // import 'https://fonts.googleapis.com/css?family=Raleway:400,800,300';
+
+const bounceIn = keyframes`
+  0%{
+    opacity: 0;
+    transform: scale(0.3) translate3d(0,0,0);
+  }
+  50%{
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+  80%{
+    opacity: 1;
+    transform: scale(0.89);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+  }
+`;
 
 export const Grid = styled.div`
   position: relative;
@@ -8,6 +27,11 @@ export const Grid = styled.div`
   max-width: 1000px;
   list-style: none;
   text-align: center;
+
+  animation-name: ${bounceIn};
+  animation-duration: 450ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 
   & figure {
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
