@@ -1,10 +1,26 @@
 import styled, { css, keyframes } from 'styled-components';
 
+export const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  @media screen and (max-width: 50em) {
+    flex-direction: column;
+  }
+`;
+
 export const FilterWrapper = styled.div`
   display: flex;
+  margin-right: 10%;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 50em) {
+    margin-right: 0;
+  }
 `;
 
 const bounceIn = keyframes`
@@ -57,6 +73,12 @@ export const FilterItem = styled.li`
         background: #7178fc;
       }
     `}
+
+  @media screen and (max-width: 50em) {
+    margin-top: 40px;
+    font-size: 14px;
+    margin-right: 5px;
+  }
 `;
 
 export const Container = styled.div`
@@ -73,6 +95,12 @@ export const Grid = styled.div`
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
+
+  @media screen and (max-width: 50em) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+    margin: 0;
+  }
 `;
 
 export const PortfolioWrapper = styled.div`
