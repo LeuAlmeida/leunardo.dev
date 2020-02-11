@@ -69,7 +69,7 @@ function ImagePortfolio({ image, name, boldName, description, github, behance, u
 }
 
 ImagePortfolio.propTypes = {
-  image: PropTypes.shape,
+  image: PropTypes.string,
   name: PropTypes.string,
   boldName: PropTypes.string,
   description: PropTypes.string,
