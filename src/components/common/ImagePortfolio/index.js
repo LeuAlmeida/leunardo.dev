@@ -51,16 +51,16 @@ function ImagePortfolio({ image, name, boldName, description, github, behance, u
       </Grid>
 
       <ReactTooltip id="github" type="dark" effect="solid">
-        <span>Github Repository</span>
+        <span>Github</span>
       </ReactTooltip>
       <ReactTooltip id="behance" type="dark" effect="solid">
-        <span>Behance Presentation</span>
+        <span>Behance</span>
       </ReactTooltip>
       <ReactTooltip id="website" type="dark" effect="solid">
-        <span>Visit the Website</span>
+        <span>Visit</span>
       </ReactTooltip>
       <ReactTooltip id="video" type="dark" effect="solid">
-        <span>Watch this Video</span>
+        <span>Watch</span>
       </ReactTooltip>
     </div>
   );
