@@ -14,9 +14,9 @@ export const Intro = () => (
       <Details>
         <h1>Hello, I'm Léu Almeida</h1>
         <h4>
-          I am a{' '}
+          I am{' '}
           <ReactTypingEffect
-            text={['Frontend Dev', 'Backend Dev', 'UX & UI Designer']}
+            text={['Frontend Developer', 'Backend Developer', 'UX & UI Designer']}
             speed="100"
             typingDelay="1000"
             eraseDelay="3000"
