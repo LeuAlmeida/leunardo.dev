@@ -17,8 +17,8 @@ export const Grid = styled.div`
     overflow: hidden;
     margin: 10px 1%;
     min-width: 320px;
-    max-width: 600px;
-    max-height: 400px;
+    /* max-width: 600px;
+    max-height: 400px; */
     /* width: 48%; */
     text-align: center;
     cursor: pointer;
@@ -29,7 +29,7 @@ export const Grid = styled.div`
     display: block;
     min-height: 100%;
     max-width: 100%;
-    opacity: 0.8;
+    /* opacity: 0.8; */
   }
 
   & figure figcaption {
