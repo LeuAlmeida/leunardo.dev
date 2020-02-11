@@ -7,6 +7,7 @@ const emkt = require('../../../assets/portfolio/emkt.jpg');
 const portalUmesp = require('../../../assets/portfolio/portal-umesp.jpg');
 const totvs = require('../../../assets/portfolio/totvs.jpg');
 const t3Driver = require('../../../assets/portfolio/t3-driver-horizontal.jpg');
+const guigaPeixoto = require('../../../assets/portfolio/guiga-peixoto.jpg');
 
 module.exports = {
   aircnc,
@@ -18,4 +19,5 @@ module.exports = {
   portalUmesp,
   totvs,
   t3Driver,
+  guigaPeixoto,
 };
