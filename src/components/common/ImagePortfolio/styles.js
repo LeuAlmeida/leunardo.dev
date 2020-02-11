@@ -41,11 +41,16 @@ export const Grid = styled.div`
     overflow: hidden;
     margin: 10px 1%;
     min-width: 320px;
-    /* max-width: 600px;
-    max-height: 400px; */
-    /* width: 48%; */
+    max-width: 600px;
+    max-height: 400px;
     text-align: center;
     cursor: pointer;
+  }
+
+  @media screen and (max-width: 50em) {
+    & figure {
+      min-width: 100px;
+    }
   }
 
   & figure img {
@@ -53,7 +58,6 @@ export const Grid = styled.div`
     display: block;
     min-height: 100%;
     max-width: 100%;
-    /* opacity: 0.8; */
   }
 
   & figure figcaption {
@@ -221,12 +225,6 @@ export const Grid = styled.div`
     .content {
       padding: 0 10px;
       text-align: center;
-    }
-    .grid figure {
-      display: inline-block;
-      float: none;
-      margin: 10px auto;
-      width: 100%;
     }
   }
   *,
