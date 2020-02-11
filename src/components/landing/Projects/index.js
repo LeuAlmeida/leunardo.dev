@@ -38,7 +38,7 @@ export const Projects = () => {
   );
   return (
     <Wrapper as={Container} id="pinned">
-      <h2>Pinned Repositories</h2>
+      <h2>Most Starred Repositories</h2>
       <Grid>
         {edges.map(({ node }) => (
           <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
