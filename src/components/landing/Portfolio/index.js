@@ -1,21 +1,20 @@
 import React from 'react';
 
-import { Container, Grid } from './styles';
-
+import { Container, Grid, PortfolioWrapper } from './styles';
 import ImagePortfolio from '../../common/ImagePortfolio';
-
-import aircnc from '../../../assets/portfolio/aircnc.jpg';
+import * as images from './images';
 
 export const Portfolio = () => (
-  <Container>
-    <Grid>
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-      <ImagePortfolio name="Air" boldName="CnC" github="https://github.com/LeuAlmeida" image={aircnc} />
-    </Grid>
-  </Container>
+  <PortfolioWrapper>
+    <Container>
+      <Grid>
+        <ImagePortfolio
+          boldName="BTM"
+          name="Performance"
+          github="https://github.com/LeuAlmeida"
+          image={images.aircnc}
+        />
+      </Grid>
+    </Container>
+  </PortfolioWrapper>
 );
