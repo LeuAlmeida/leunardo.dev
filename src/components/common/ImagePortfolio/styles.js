@@ -10,15 +10,16 @@ export const Grid = styled.div`
   text-align: center;
 
   & figure {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+    border-radius: 4px;
     position: relative;
     float: left;
     overflow: hidden;
     margin: 10px 1%;
     min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;
-    background: #3085a3;
+    max-width: 600px;
+    max-height: 400px;
+    /* width: 48%; */
     text-align: center;
     cursor: pointer;
   }
