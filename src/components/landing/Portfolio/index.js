@@ -7,6 +7,7 @@ import { portfolio } from './portfolio';
 export const Portfolio = () => {
   const [filter, setFilter] = useState('all');
   const [projects, setProjects] = useState([]);
+  // const [active, setActive] = useState('');
 
   useEffect(() => {
     setProjects(portfolio);
@@ -19,12 +20,24 @@ export const Portfolio = () => {
   return (
     <>
       <FilterWrapper>
-        <FilterItem onClick={() => setFilter('all')}>All</FilterItem>
-        <FilterItem onClick={() => setFilter('frontend')}>Frontend</FilterItem>
-        <FilterItem onClick={() => setFilter('mobile')}>Mobile</FilterItem>
-        <FilterItem onClick={() => setFilter('backend')}>Backend</FilterItem>
-        <FilterItem onClick={() => setFilter('ux-ui')}>UX/UI</FilterItem>
-        <FilterItem onClick={() => setFilter('others')}>Others</FilterItem>
+        <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
+          All
+        </FilterItem>
+        <FilterItem active={filter === 'frontend'} onClick={() => setFilter('frontend')}>
+          Frontend
+        </FilterItem>
+        <FilterItem active={filter === 'mobile'} onClick={() => setFilter('mobile')}>
+          Mobile
+        </FilterItem>
+        <FilterItem active={filter === 'backend'} onClick={() => setFilter('backend')}>
+          Backend
+        </FilterItem>
+        <FilterItem active={filter === 'ux-ui'} onClick={() => setFilter('ux-ui')}>
+          UX/UI
+        </FilterItem>
+        <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
+          Others
+        </FilterItem>
       </FilterWrapper>
       <PortfolioWrapper>
         <Container>
