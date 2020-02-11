@@ -1,42 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Container, Grid, PortfolioWrapper } from './styles';
+import { FilterWrapper, FilterItem, Container, Grid, PortfolioWrapper } from './styles';
 import ImagePortfolio from '../../common/ImagePortfolio';
-import * as images from './images';
+import { portfolio } from './portfolio';
 
-export const Portfolio = () => (
-  <PortfolioWrapper>
-    <Container>
-      <Grid>
-        <ImagePortfolio
-          boldName="BTM"
-          name="Performance"
-          behance="https://www.behance.net/gallery/78028243/Projeto-de-Website-BTM-Performance"
-          url="https://btmperformance.com.br/"
-          image={images.btm}
-        />
-        <ImagePortfolio
-          boldName="APP"
-          name="October"
-          behance="https://www.behance.net/gallery/87664595/React-Native-open-source-App-October"
-          github="https://github.com/LeuAlmeida/app.october"
-          image={images.appoctober}
-        />
-        <ImagePortfolio
-          boldName="T3"
-          name="Driver"
-          behance="https://www.behance.net/gallery/73684575/Criacao-de-Website-T3-Driver"
-          url="https://t3driver.com.br/"
-          image={images.t3Driver}
-        />
-        <ImagePortfolio
-          boldName="E-mail"
-          name="Marketing"
-          github="https://github.com/LeuAlmeida/E-mail-Marketing-Portfolio"
-          behance="https://github.com/LeuAlmeida/E-mail-Marketing-Portfolio"
-          image={images.emkt}
-        />
-      </Grid>
-    </Container>
-  </PortfolioWrapper>
-);
+export const Portfolio = () => {
+  const [filter, setFilter] = useState('all');
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    setProjects(portfolio);
+  }, []);
+
+  useEffect(() => {
+    const filtered = portfolio.map(port => ({ ...port, filtered: port.category.includes(filter) }));
+    setProjects(filtered);
+  }, [filter]);
+  return (
+    <>
+      <FilterWrapper>
+        <FilterItem onClick={() => setFilter('all')}>All</FilterItem>
+        <FilterItem onClick={() => setFilter('frontend')}>Frontend</FilterItem>
+        <FilterItem onClick={() => setFilter('mobile')}>Mobile</FilterItem>
+        <FilterItem onClick={() => setFilter('backend')}>Backend</FilterItem>
+        <FilterItem onClick={() => setFilter('ux-ui')}>UX/UI</FilterItem>
+        <FilterItem onClick={() => setFilter('others')}>Others</FilterItem>
+      </FilterWrapper>
+      <PortfolioWrapper>
+        <Container>
+          <Grid>
+            {projects.map(item =>
+              item.filtered === true ? (
+                <ImagePortfolio
+                  key={item.name}
+                  boldName={item.boldName}
+                  name={item.name}
+                  behance={item.behance}
+                  github={item.github}
+                  vide={item.video}
+                  url={item.url}
+                  image={item.image}
+                />
+              ) : (
+                ''
+              )
+            )}
+          </Grid>
+        </Container>
+      </PortfolioWrapper>
+    </>
+  );
+};
