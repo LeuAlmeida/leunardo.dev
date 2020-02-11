@@ -10,10 +10,8 @@ export const Container = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  background: red;
   width: 80%;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  list-style: none;
+  gap: 5px;
 `;
