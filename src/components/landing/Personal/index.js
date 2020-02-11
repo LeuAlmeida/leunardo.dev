@@ -1,32 +1,66 @@
 import React from 'react';
 import { Container } from 'components/common';
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+import { FaCode, FaCoffee, FaMusic, FaTv, FaDumbbell, FaPencilRuler, FaBook, FaGamepad } from 'react-icons/fa';
+import { Wrapper, SkillsWrapper, Details, TastesQuirksRow, TasteOrQuirk } from './styles';
+import { TitleWrapper, H2, SubTitle } from '../../common/Text';
 
 export const Personal = () => (
   <Wrapper id="myself">
     <SkillsWrapper as={Container}>
-      {/* <Thumbnail></Thumbnail> */}
+      <TitleWrapper>
+        <H2>About Me</H2>
+        <SubTitle>Personal</SubTitle>
+      </TitleWrapper>
       <Details>
-        <h1>Who I am</h1>
-        <p>
-          Hello! My name is Leonardo Almeida, but you can call me Léu :)
-          <br />
-          I’m 20 years old and I’m a tech enthusiast with a focus on front-end. Alongside this I also seek to learn
-          about back-end so I can become a full stack developer. I also have experience on audiovisual production, 3D
-          modeling and Graphic Design for occasional needs.
-          <br />
-          I’ve been involved with this market for a decade, when I was only 10 years old and started studying Basic
-          HTML. Since then my crave for learning only got bigger.
-          <br />
-          My projects are focused on the user experience and it’s usability as a whole, aiming for a good relationship
-          between user and platform - whether it’s a system or a full website.
-          <br />
-        </p>
-        <p>
-          From my perspective, proactivity and optimism should walk side by side in a way that great results are
-          achieved on a relaxed workspace.
-        </p>
-        <p>Now that you know a little about me, let’s grab a coffee?</p>
+        <h3>Tastes and Quirks</h3>
+
+        <TastesQuirksRow>
+          <TasteOrQuirk>
+            <FaCode color="#333" size={64} />
+            <span>Code</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaCoffee color="#333" size={64} />
+            <span>Coffee</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaMusic color="#333" size={64} />
+            <span>Music</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaTv color="#333" size={64} />
+            <span>Series</span>
+          </TasteOrQuirk>
+        </TastesQuirksRow>
+
+        <TastesQuirksRow>
+          <TasteOrQuirk>
+            <FaDumbbell color="#333" size={64} />
+            <span>Workout</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaPencilRuler color="#333" size={64} />
+            <span>Studying</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaBook color="#333" size={64} />
+            <span>Books</span>
+          </TasteOrQuirk>
+          <TasteOrQuirk>
+            <FaGamepad color="#333" size={64} />
+            <span>Games</span>
+          </TasteOrQuirk>
+        </TastesQuirksRow>
+      </Details>
+    </SkillsWrapper>
+
+    <SkillsWrapper as={Container}>
+      <TitleWrapper>
+        <H2>About Me</H2>
+        <SubTitle>Professional</SubTitle>
+      </TitleWrapper>
+      <Details>
+        <h3>Interests</h3>
       </Details>
     </SkillsWrapper>
   </Wrapper>
