@@ -20,7 +20,7 @@ export const Portfolio = () => {
   return (
     <>
       <HeaderContainer id="portfolio">
-        <TitleWrapper>
+        <TitleWrapper style={{ marginLeft: '10%' }}>
           <H2>Portfólio</H2>
           <SubTitle>Recent Jobs</SubTitle>
         </TitleWrapper>
