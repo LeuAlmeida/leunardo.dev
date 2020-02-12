@@ -28,6 +28,24 @@ export const Details = styled.div`
     width: 100%;
   }
 
+  @media only screen and (max-width: 960px) {
+    padding-top: 4rem;
+
+    h1,
+    h3 {
+      margin-left: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    padding-top: 4rem;
+
+    h1,
+    h3 {
+      margin-left: 10%;
+    }
+  }
+
   h1,
   h3 {
     margin-bottom: 2rem;
@@ -50,6 +68,14 @@ export const TastesQuirksRow = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 40px;
+
+  @media (max-width: 410px) {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 `;
 
 export const TasteOrQuirk = styled.div`
