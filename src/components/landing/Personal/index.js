@@ -6,6 +6,7 @@ import { TitleWrapper, H2, SubTitle } from '../../common/Text';
 
 import About from './About';
 import LanguageCounter from '../../common/LanguageCounter';
+import Techs from './Techs';
 
 export const Personal = () => (
   <Wrapper id="myself">
@@ -53,5 +54,7 @@ export const Personal = () => (
         <LanguageCounter />
       </InterestSection>
     </SkillsWrapper>
+
+    <Techs />
   </Wrapper>
 );
