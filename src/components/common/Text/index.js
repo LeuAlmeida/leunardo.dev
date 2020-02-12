@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 10%;
+  /* padding-left: 10%; */
   width: 200px;
   align-self: flex-start;
 `;
