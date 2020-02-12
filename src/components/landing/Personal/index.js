@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container } from 'components/common';
+import CardInterests from 'components/common/CardInterests';
 import { FaCode, FaCoffee, FaMusic, FaTv, FaDumbbell, FaPencilRuler, FaBook, FaGamepad } from 'react-icons/fa';
-import { Wrapper, SkillsWrapper, Details, TastesQuirksRow, TasteOrQuirk } from './styles';
+import { Wrapper, SkillsWrapper, Details, TastesQuirksRow, TasteOrQuirk, InterestSection } from './styles';
 import { TitleWrapper, H2, SubTitle } from '../../common/Text';
 
 export const Personal = () => (
@@ -59,9 +60,26 @@ export const Personal = () => (
         <H2>About Me</H2>
         <SubTitle>Professional</SubTitle>
       </TitleWrapper>
-      <Details>
-        <h3>Interests</h3>
-      </Details>
+      <InterestSection>
+        <Details>
+          <h3>Interests</h3>
+        </Details>
+        <CardInterests
+          name="Freelances"
+          subtitle="available."
+          submit={() => {
+            alert('Freela!');
+          }}
+        />
+        <CardInterests
+          name="In loco"
+          subtitle="only to Germany."
+          cardNumber="card2"
+          submit={() => {
+            alert('Germany!');
+          }}
+        />
+      </InterestSection>
     </SkillsWrapper>
   </Wrapper>
 );

@@ -67,3 +67,10 @@ export const TasteOrQuirk = styled.div`
     margin-top: 8px;
   }
 `;
+
+export const InterestSection = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+`;
