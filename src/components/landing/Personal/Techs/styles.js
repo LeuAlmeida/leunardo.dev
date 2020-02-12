@@ -2,19 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   overflow: hidden;
-  padding: 4rem 0;
+  padding: 2rem 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  /* Parallax Image */
-  background-image: url('https://www.w3schools.com/howto/img_parallax.jpg');
-  min-height: 100%;
-  position: relative;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   @media (max-width: 960px) {
     flex-direction: column;
@@ -61,5 +52,26 @@ export const Details = styled.div`
     font-weight: normal;
     line-height: 1.3;
     color: #707070;
+  }
+`;
+
+export const Badges = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+
+  @media (max-width: 410px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .ui.image.label .detail {
+    width: 100%;
+  }
+
+  .ui.image.label .detail {
+    white-space: nowrap;
   }
 `;
