@@ -10,7 +10,8 @@ export const CardContainer = styled.div`
 
   & .card {
     position: relative;
-    width: 500px;
+    width: 90%;
+    max-width: 800px;
     height: 200px;
     background-color: #fff;
     overflow: hidden;
@@ -59,7 +60,7 @@ export const CardContainer = styled.div`
     font-family: 'Poppins', sans-serif;
     position: absolute;
     bottom: 0;
-    right: 130px;
+    right: 25%;
     font-size: 60px;
     font-weight: 700;
     color: #fff;
@@ -87,7 +88,8 @@ export const CardContainer = styled.div`
   }
   & .card .pic {
     z-index: 100;
-    width: 400px;
+    width: 80%;
+    object-fit: cover;
     height: 200px;
     background-image: url('https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80');
     background-size: 100% 100%;
@@ -168,5 +170,25 @@ export const CardContainer = styled.div`
     bottom: 16px;
     right: 16px;
     width: 100px;
+  }
+
+  @media only screen and (max-width: 960px) {
+    & {
+      min-width: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 568px) {
+    & {
+      min-width: 350px;
+    }
+
+    & .card h2 {
+      bottom: 0;
+      right: 90px;
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+    }
   }
 `;
