@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   height: 65px;
   position: fixed;
   z-index: 5555;
+  box-shadow: 3px 3px 13px 0px #00000026;
 `;
 
 export const Overlay = styled.div`
