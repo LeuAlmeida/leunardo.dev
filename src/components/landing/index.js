@@ -5,3 +5,4 @@ export * from './Projects';
 export * from './Portfolio';
 export * from './Personal';
 export * from './ProfessionalXp';
+export * from './Blockquote';
