@@ -1,34 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Timeline({ title, description, name, start, sup, end }) {
+function Timeline({ title, description, company, start, end }) {
   return (
-    <div className="box">
-      <ul id="first-list">
-        <li>
-          <span></span>
-          <div className="title">{title}</div>
-          <div className="info">{description}</div>
-          <div className="name">{name}</div>
-          <div className="time">
-            <span>
-              {start}
-              <sup>{sup}</sup>
-            </span>
-            <span>{end}</span>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <li>
+      <span></span>
+      <div className="title">{title}</div>
+      <div className="info">{description}</div>
+      <div className="name">{company}</div>
+      <div className="time">
+        <span>{end}</span>
+        <span>{start}</span>
+      </div>
+    </li>
   );
 }
 
 Timeline.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  name: PropTypes.string,
+  company: PropTypes.string,
   start: PropTypes.string,
-  sup: PropTypes.string,
   end: PropTypes.string,
 };
 
