@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, SEO } from 'components/common';
-import { Intro, Skills, Portfolio, Contact, Projects, Personal, ProfessionalXp } from 'components/landing';
+import { Intro, Skills, Portfolio, Contact, Projects, Personal, ProfessionalXp, Blockquote } from 'components/landing';
 import FloatMenu from 'components/floatMenu';
 
 export default () => (
@@ -13,6 +13,7 @@ export default () => (
     <Skills />
     <Personal />
     <ProfessionalXp />
+    <Blockquote />
     <Contact />
   </Layout>
 );
