@@ -9,7 +9,7 @@ import LanguageCounter from '../../common/LanguageCounter';
 import Techs from './Techs';
 
 export const Personal = () => (
-  <Wrapper id="myself">
+  <Wrapper>
     <SkillsWrapper as={Container}>
       <About />
     </SkillsWrapper>
