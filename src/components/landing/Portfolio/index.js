@@ -14,8 +14,12 @@ export const Portfolio = () => {
   }, []);
 
   useEffect(() => {
-    const filtered = portfolio.map(port => ({ ...port, filtered: port.category.includes(filter) }));
-    setProjects(filtered);
+    setProjects([]);
+
+    setTimeout(() => {
+      const filtered = portfolio.map(port => ({ ...port, filtered: port.category.includes(filter) }));
+      setProjects(filtered);
+    }, 0);
   }, [filter]);
   return (
     <>
