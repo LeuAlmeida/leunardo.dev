@@ -79,9 +79,10 @@ export const CardContainer = styled.div`
     position: absolute;
     top: 20px;
     right: 70px;
+    font-weight: bold;
     color: #333;
     opacity: 0.7;
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 1px;
     writing-mode: vertical-lr;
     -webkit-transition: all 0.2s ease;
