@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container } from 'components/common';
 import CardInterests from 'components/common/CardInterests';
-import { Wrapper, SkillsWrapper, InterestSection, Details } from './styles';
-import { TitleWrapper, H2, SubTitle } from '../../common/Text';
+import { Wrapper, SkillsWrapper, InterestSection } from './styles';
+import { TitleWrapper, H2, SubTitle, Details } from '../../common/Text';
 
 import About from './About';
 import LanguageCounter from '../../common/LanguageCounter';
@@ -42,8 +42,8 @@ export const Personal = () => (
     </SkillsWrapper>
     <SkillsWrapper as={Container}>
       <TitleWrapper>
-        <H2>About Me</H2>
-        <SubTitle>Skills</SubTitle>
+        <H2>My i18n</H2>
+        <SubTitle>Who I am</SubTitle>
       </TitleWrapper>
 
       <InterestSection>
