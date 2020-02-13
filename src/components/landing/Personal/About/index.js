@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCode, FaCoffee, FaMusic, FaTv, FaDumbbell, FaPencilRuler, FaBook, FaGamepad } from 'react-icons/fa';
-import { TastesQuirksRow, TasteOrQuirk, Details } from './styles';
-import { TitleWrapper, H2, SubTitle } from '../../../common/Text';
+import { TastesQuirksRow, TasteOrQuirk } from './styles';
+import { Details, TitleWrapper, H2, SubTitle } from '../../../common/Text';
 
 export default function About() {
   return (
