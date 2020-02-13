@@ -15,10 +15,10 @@ export const Container = styled.div`
 export const Badges = styled.div`
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
 
-  @media (max-width: 410px) {
+  @media (max-width: 790px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
