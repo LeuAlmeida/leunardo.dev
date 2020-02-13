@@ -7,6 +7,7 @@ export const Container = styled.div`
     display: flex;
     height: 75vh;
     padding: 0 20px;
+    min-height: 400px;
   }
 
   .blockquote {
