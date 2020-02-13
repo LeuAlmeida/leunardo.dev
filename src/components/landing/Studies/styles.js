@@ -11,22 +11,50 @@ export const Container = styled.section`
   @media (max-width: 960px) {
     flex-direction: column;
   }
+
+  & .ui.image.label .detail {
+    width: 100% !important;
+  }
+
+  & .ui .blue .image .label {
+    margin-left: -20px;
+  }
+`;
+
+export const CardsSection = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @media (max-width: 1340px) {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  @media (max-width: 410px) {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
 `;
 
 export const SkillCard = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  transform: translateY(-50%) translateX(-50%);
   padding: 20px;
-  width: 15em;
+  /* width: 15em; */
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   cursor: pointer;
+  transition: box-shadow 0.3s;
+  /* margin: 20px; */
 
   &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
   }
   &:hover .skill-card__header {
     height: 40px;
@@ -37,6 +65,9 @@ export const SkillCard = styled.div`
   }
   &:hover .skill-card__body {
     height: 170px;
+  }
+  & .skill-card__body .skill-card__knowledge li {
+    list-style: none;
   }
   &:hover .skill-card__body .skill-card__knowledge li {
     -webkit-transform: translateX(0);
@@ -70,15 +101,18 @@ export const SkillCard = styled.div`
     -webkit-transition-delay: 1.5s;
     transition-delay: 1.5s;
   }
+  & .orange {
+    background-color: #eb6c3f;
+  }
   & .skill-card__header {
     position: relative;
-    background-color: #eb6c3f;
     height: 170px;
     margin: -20px -20px 20px -20px;
     -webkit-transition: height 0.5s;
     transition: height 0.5s;
     overflow: hidden;
   }
+
   & .skill-card__header .skill-card__icon {
     position: absolute;
     top: 50%;
