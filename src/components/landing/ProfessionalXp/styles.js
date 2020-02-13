@@ -3,14 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.section`
   margin: 0 auto;
   width: 100%;
-  background-color: #7178fc;
+  /* background-color: #7178fc; */
   padding-bottom: 10%;
 
   .box {
     margin: 0 10%;
-    height: 630px;
     overflow: hidden;
-    padding: 10px 0 40px 60px;
+    padding: 10px 0 40px 40px;
   }
 
   .box ul {
@@ -31,7 +30,7 @@ export const Container = styled.section`
     display: block;
     width: 0;
     height: 100%;
-    border: 1px dashed #fff;
+    border: 1px dashed #7178fc;
     position: absolute;
     top: 0;
     left: 30px;
@@ -41,8 +40,8 @@ export const Container = styled.section`
     margin: 20px 60px 60px;
     position: relative;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.3);
-    color: #fff;
+    background: rgb(238, 237, 253);
+    color: #7178fc;
     border-radius: 10px;
     line-height: 20px;
     width: 35%;
@@ -53,7 +52,7 @@ export const Container = styled.section`
     display: block;
     width: 0;
     height: 100%;
-    border: 1px solid #fff;
+    border: 1px solid #7178fc;
     position: absolute;
     top: 0;
     left: -30px;
@@ -66,10 +65,10 @@ export const Container = styled.section`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ff6d6d;
-    border: 2px solid #fff;
+    background: #fff;
+    border: 2px solid #7178fc;
     position: absolute;
-    left: -7.5px;
+    left: -5px;
   }
 
   .box ul li > span:before {
@@ -101,7 +100,7 @@ export const Container = styled.section`
   .box .time span {
     position: absolute;
     left: -100px;
-    color: #fff;
+    color: #7178fc;
     font-size: 80%;
     font-weight: bold;
   }
