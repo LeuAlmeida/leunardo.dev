@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 10%;
   width: 100%;
-  /* background-color: #7178fc; */
+  display: flex;
+  flex-direction: row;
   padding-bottom: 10%;
 
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+
   .box {
-    margin: 0 10%;
     overflow: hidden;
     padding: 10px 0 40px 40px;
   }
@@ -22,7 +27,7 @@ export const Container = styled.section`
   }
 
   .box ul:last-of-type {
-    top: 80px;
+    top: 30px;
   }
 
   .box ul:before {
@@ -44,7 +49,7 @@ export const Container = styled.section`
     color: #7178fc;
     border-radius: 10px;
     line-height: 20px;
-    width: 35%;
+    width: 85%;
   }
 
   .box ul li > span {
