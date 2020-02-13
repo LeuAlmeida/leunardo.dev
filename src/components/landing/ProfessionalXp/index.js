@@ -15,16 +15,29 @@ export function ProfessionalXp() {
         </TitleWrapper>
         <Details>
           <h3>Professional Experience</h3>
-          {jobs.map(job => (
-            <Timeline
-              title={job.title}
-              description={job.description}
-              name={job.name}
-              start={job.start}
-              sup={job.sup}
-              end={job.end}
-            />
-          ))}
+          <div className="box">
+            <ul id="first-list">
+              <Timeline
+                title="Opportunity in Germany"
+                description=""
+                company=""
+                start="JAN, 2021"
+                end="BEYOND"
+                supEnd=""
+                future
+              />
+              {jobs.map(job => (
+                <Timeline
+                  key={job.title}
+                  title={job.title}
+                  description={job.description}
+                  company={job.company}
+                  start={job.start}
+                  end={job.end}
+                />
+              ))}
+            </ul>
+          </div>
         </Details>
       </Container>
     </>
