@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container } from 'components/common';
+import { Details } from 'components/common/Text';
 import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
-import { Wrapper, Flex, Links, Details } from './styles';
+import { Wrapper, Flex, Links } from './styles';
 
 export const Footer = () => (
   <Wrapper>
