@@ -3,6 +3,8 @@ import Timeline from '../../common/Timeline';
 import { TitleWrapper, H2, SubTitle, Details } from '../../common/Text';
 import { Container } from './styles';
 
+import { jobs } from './jobs';
+
 export function ProfessionalXp() {
   return (
     <>
@@ -13,14 +15,16 @@ export function ProfessionalXp() {
         </TitleWrapper>
         <Details>
           <h3>Professional Experience</h3>
-          <Timeline
-            title="comment #01"
-            description="the best animation , the best toturials you would ever see ."
-            name="- dr. mohamed -"
-            start="JUN, 17"
-            sup="th"
-            end="12:00 AM"
-          />
+          {jobs.map(job => (
+            <Timeline
+              title={job.title}
+              description={job.description}
+              name={job.name}
+              start={job.start}
+              sup={job.sup}
+              end={job.end}
+            />
+          ))}
         </Details>
       </Container>
     </>
