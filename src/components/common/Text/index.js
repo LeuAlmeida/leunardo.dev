@@ -34,6 +34,11 @@ export const Details = styled.div`
   flex: 1;
   padding-left: 2rem;
 
+  a {
+    font-weight: bold;
+    color: #7178fc;
+  }
+
   h3 {
     margin-bottom: 2rem;
     font-size: 26pt;
