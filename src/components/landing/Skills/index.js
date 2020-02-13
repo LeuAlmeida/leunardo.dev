@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container } from 'components/common';
+import { Details } from 'components/common/Text';
 import dev from 'assets/illustrations/skills.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
+import { Wrapper, SkillsWrapper, Thumbnail } from './styles';
 
 export const Skills = () => (
   <Wrapper id="myself">
