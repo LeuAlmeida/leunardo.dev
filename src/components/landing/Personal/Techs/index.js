@@ -7,16 +7,7 @@ import { TitleWrapper, H2, SubTitle, Details } from '../../../common/Text';
 function Techs() {
   return (
     <>
-      <Container style={{ paddingTop: 40 }}>
-        <TitleWrapper>
-          <H2>#Techs</H2>
-          <SubTitle>About Me</SubTitle>
-        </TitleWrapper>
-        <Details>
-          <h3>Technical Skills</h3>
-        </Details>
-      </Container>
-      <Container style={{ paddingBottom: 40 }}>
+      <Container>
         <Badges>
           <Tag color="blue" name="CSS3" icon="code" />
           <Tag color="red" name="HTML5" icon="code" />
