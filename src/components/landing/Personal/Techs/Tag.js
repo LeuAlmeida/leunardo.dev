@@ -8,8 +8,11 @@ function Tag({ name, color, icon, url }) {
       <a
         className={`ui ${color} image label`}
         style={{
+          marginTop: 30,
           display: 'flex',
           alignItems: 'center',
+          position: 'relative',
+          left: -15,
         }}
         href={url}
         target="_blank"
@@ -37,6 +40,7 @@ function Tag({ name, color, icon, url }) {
 
 Tag.propTypes = {
   name: PropTypes.string,
+  url: PropTypes.string,
   color: PropTypes.string,
   icon: PropTypes.string,
 };
