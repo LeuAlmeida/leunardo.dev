@@ -55,6 +55,21 @@ export const Personal = () => (
       </InterestSection>
     </SkillsWrapper>
 
-    <Techs />
+    <SkillsWrapper as={Container} style={{ paddingTop: '4rem', paddingBottom: 0 }}>
+      <TitleWrapper>
+        <H2>#Techs</H2>
+        <SubTitle>About Me</SubTitle>
+      </TitleWrapper>
+
+      <InterestSection>
+        <Details>
+          <h3>Technical Skills</h3>
+        </Details>
+      </InterestSection>
+    </SkillsWrapper>
+
+    <SkillsWrapper as={Container} style={{ paddingBottom: '4rem' }}>
+      <Techs />
+    </SkillsWrapper>
   </Wrapper>
 );
