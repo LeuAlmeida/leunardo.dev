@@ -16,12 +16,12 @@ export const Intro = () => (
         <h1>Hello, I'm Léu Almeida</h1>
         <h4>
           I am{' '}
-          <ReactTypingEffect
+          {/* <ReactTypingEffect
             text={['Frontend Developer', 'Backend Developer', 'UX & UI Designer']}
             speed="100"
             typingDelay="1000"
             eraseDelay="3000"
-          />
+          /> */}
         </h4>
         <h6>Stalk me:</h6>
         <SocialIcons>
