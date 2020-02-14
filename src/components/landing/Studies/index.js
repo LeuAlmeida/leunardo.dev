@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TitleWrapper, H2, SubTitle, Details } from '../../common/Text';
 import { Container, SkillCard, CardsSection } from './styles';
 import Tag from '../Personal/Techs/Tag';
@@ -45,3 +46,12 @@ export function Studies() {
     </Container>
   );
 }
+
+CardStudy.propTypes = {
+  color: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  duration: PropTypes.string,
+  description: PropTypes.string,
+  certificate: PropTypes.string,
+};
