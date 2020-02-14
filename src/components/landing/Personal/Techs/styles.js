@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   overflow: hidden;
-  padding: 2rem 10%;
+  /* padding: 0 10%; */
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: space-between;
 
