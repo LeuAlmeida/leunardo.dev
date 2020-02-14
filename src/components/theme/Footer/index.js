@@ -25,22 +25,46 @@ export const Footer = () => (
         </span>
       </Details>
       <Links>
-        <a href="https://github.com/LeuAlmeida" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/LeuAlmeida" target="_blank" rel="noopener noreferrer" data-tip data-for="github">
           <FaGithub color="#000" size={16} />
         </a>
-        <a href="https://www.behance.net/almeida99" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.behance.net/almeida99"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-tip
+          data-for="behance"
+        >
           <FaBehance color="#000" size={16} />
         </a>
-        <a href="https://www.linkedin.com/in/leonardoalmeida99/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/leonardoalmeida99/"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-tip
+          data-for="linkedin"
+        >
           <FaLinkedin color="#000" size={16} />
         </a>
-        <a href="https://www.instagram.com/1bigo/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com/1bigo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-tip
+          data-for="instagram"
+        >
           <FaInstagram color="#000" size={16} />
         </a>
-        <a href="https://www.facebook.com/leuzinhopataty" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.facebook.com/leuzinhopataty"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-tip
+          data-for="facebook"
+        >
           <FaFacebookF color="#000" size={16} />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer" data-tip data-for="cv">
           <FaFilePdf color="#000" size={16} />
         </a>
       </Links>
