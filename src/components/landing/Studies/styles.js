@@ -101,14 +101,35 @@ export const SkillCard = styled.div`
     -webkit-transition-delay: 1.5s;
     transition-delay: 1.5s;
   }
+  & .grey {
+    background-color: #666;
+    border-radius: 4px;
+    padding: 5px;
+  }
   & .orange {
     background-color: #eb6c3f;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  & .yellow {
+    background-color: #ebc744;
+    border-radius: 4px;
+    padding: 5px;
   }
   & .blue {
     background-color: #3fb3eb;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  & .purple {
+    background-color: #3f5ceb;
+    border-radius: 4px;
+    padding: 5px;
   }
   & .red {
     background-color: #eb3f3f;
+    border-radius: 4px;
+    padding: 5px;
   }
   & .green {
     background-color: #3feb5c;
@@ -150,6 +171,7 @@ export const SkillCard = styled.div`
     text-transform: uppercase;
   }
   & .skill-card__body .skill-card__company {
+    font-size: 0.9em;
     display: flex;
     color: #fff;
     margin-bottom: 10px;
