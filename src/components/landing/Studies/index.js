@@ -127,7 +127,7 @@ export function Studies() {
           <CardStudy
             name="Introduction to Web Design"
             image="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg"
-            company="SAGA"
+            company="Objetiva School"
             duration="March 2010"
             color="blue"
             description="Introductory course of Web Design in software such as Macromedia Flash 8, Macromedia Fireworks 8, Macromedia Dreamweaver 8, that would eventually become Basic Adobe HTML, Basic CSS."
