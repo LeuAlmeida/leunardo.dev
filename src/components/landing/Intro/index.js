@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Header } from 'components/theme';
 import { Container, ButtonIcon } from 'components/common';
 import { Details } from 'components/common/Text';
@@ -34,22 +33,22 @@ export function Intro() {
           <h4>I am {name}</h4>
           <h6>Stalk me in</h6>
           <SocialIcons>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://github.com/LeuAlmeida">
               <FaGithub color="#FFF" size={18} />
             </ButtonIcon>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://www.behance.net/almeida99">
               <FaBehance color="#FFF" size={18} />
             </ButtonIcon>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://www.linkedin.com/in/leonardoalmeida99/">
               <FaLinkedin color="#FFF" size={18} />
             </ButtonIcon>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://www.instagram.com/1bigo/">
               <FaInstagram color="#FFF" size={18} />
             </ButtonIcon>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://www.facebook.com/leuzinhopataty">
               <FaFacebookF color="#FFF" size={18} />
             </ButtonIcon>
-            <ButtonIcon as={AnchorLink} href="#contact">
+            <ButtonIcon href="https://leunardo.dev/cv">
               <FaFilePdf color="#FFF" size={18} />
             </ButtonIcon>
           </SocialIcons>
