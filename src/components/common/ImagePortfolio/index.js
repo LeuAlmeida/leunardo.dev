@@ -20,28 +20,28 @@ function ImagePortfolio({ image, name, boldName, description, github, behance, u
             <p className="icon-links">
               {github ? (
                 <a href={github} data-tip data-for="github" target="_blank" rel="noopener noreferrer">
-                  <FaGithub size={18} color="#000" style={{ marginRight: 5 }} />
+                  <FaGithub size={18} color="#777" style={{ marginRight: 5 }} />
                 </a>
               ) : (
                 ''
               )}
               {behance ? (
                 <a href={behance} data-tip data-for="behance" target="_blank" rel="noopener noreferrer">
-                  <FaBehance size={18} color="#000" style={{ marginRight: 5 }} />
+                  <FaBehance size={18} color="#6d6d6d" style={{ marginRight: 5 }} />
                 </a>
               ) : (
                 ''
               )}
               {url ? (
                 <a href={url} data-tip data-for="website" target="_blank" rel="noopener noreferrer">
-                  <FaGlobe size={18} color="#000" style={{ marginRight: 5 }} />
+                  <FaGlobe size={18} color="#6d6d6d" style={{ marginRight: 5 }} />
                 </a>
               ) : (
                 ''
               )}
               {video ? (
                 <a href={video} data-tip data-for="video" target="_blank" rel="noopener noreferrer">
-                  <FaPlay size={18} color="#000" style={{ marginRight: 5 }} />
+                  <FaPlay size={18} color="#6d6d6d" style={{ marginRight: 5 }} />
                 </a>
               ) : (
                 ''
