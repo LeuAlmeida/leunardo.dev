@@ -23,7 +23,7 @@ export const Container = styled.section`
 
 export const CardsSection = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 
   @media (max-width: 1340px) {
@@ -64,7 +64,7 @@ export const SkillCard = styled.div`
     transform: translateX(-50%) translateY(-50%) scale(3);
   }
   &:hover .skill-card__body {
-    height: 170px;
+    height: 300px;
   }
   & .skill-card__body .skill-card__knowledge li {
     list-style: none;
@@ -104,6 +104,17 @@ export const SkillCard = styled.div`
   & .orange {
     background-color: #eb6c3f;
   }
+  & .blue {
+    background-color: #3fb3eb;
+  }
+  & .red {
+    background-color: #eb3f3f;
+  }
+  & .green {
+    background-color: #3feb5c;
+    border-radius: 4px;
+    padding: 5px;
+  }
   & .skill-card__header {
     position: relative;
     height: 170px;
@@ -138,6 +149,11 @@ export const SkillCard = styled.div`
     font-weight: 600;
     text-transform: uppercase;
   }
+  & .skill-card__body .skill-card__company {
+    display: flex;
+    color: #fff;
+    margin-bottom: 10px;
+  }
   & .skill-card__body .skill-card__duration {
     color: #9e9e9e;
     font-style: italic;
@@ -145,6 +161,7 @@ export const SkillCard = styled.div`
   & .skill-card__body .skill-card__knowledge {
     margin-top: 10px;
     color: #424242;
+    margin-left: 0px;
   }
   & .skill-card__body .skill-card__knowledge li {
     margin-top: 5px;
