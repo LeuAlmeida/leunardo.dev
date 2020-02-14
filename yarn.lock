@@ -10697,6 +10697,11 @@ react-tooltip@^4.0.3:
   dependencies:
     prop-types "^15.6.0"
 
+react-typewriter-hook@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-typewriter-hook/-/react-typewriter-hook-1.0.1.tgz#f16d7ce6fb2b5b131c345bf38ad34ccc6d69b8d3"
+  integrity sha512-XOBBkI1fuZRH5OBpJ9qZuXxMZ1T8EgU2VsbKwR+2mvA5rMVjMtbTg2iRNFxpiYY3ClNQ5fBegAaCqRLsNNsvfg==
+
 react-typing-effect@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/react-typing-effect/-/react-typing-effect-2.0.3.tgz#94ad67031f62efce924403833989c6ef9f877815"
