@@ -5,7 +5,7 @@ import { Container, ButtonIcon } from 'components/common';
 import { Details } from 'components/common/Text';
 import dev from 'assets/illustrations/dev.svg';
 import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
-import ReactTypingEffect from 'react-typing-effect';
+// import ReactTypingEffect from 'react-typing-effect';
 import { Wrapper, IntroWrapper, Thumbnail, SocialIcons } from './styles';
 
 export const Intro = () => (
