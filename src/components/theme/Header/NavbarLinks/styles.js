@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   a {
     color: #6d6d6d;
+    font-weight: bold;
     text-decoration: none;
   }
 
