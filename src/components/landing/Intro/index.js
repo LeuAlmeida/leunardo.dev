@@ -32,7 +32,7 @@ export function Intro() {
         <Details>
           <h1>Hello, I'm Léu Almeida</h1>
           <h4>I am {name}</h4>
-          <h6>Stalk me:</h6>
+          <h6>Stalk me in</h6>
           <SocialIcons>
             <ButtonIcon as={AnchorLink} href="#contact">
               <FaGithub color="#FFF" size={18} />
