@@ -45,6 +45,10 @@ export const Details = styled.div`
     color: #212121;
   }
 
+  h6 {
+    font-size: 16pt;
+  }
+
   h4 {
     font-size: 26pt;
     color: #8c8c8c;
