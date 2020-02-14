@@ -1,7 +1,7 @@
-export const studies = [
+export const data = [
   {
     name: "Bachelor's Degree",
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Universidade Metodista de São Paulo',
     duration: 'December 2020 (4 years) by Universidade Metodista de São Paulo',
     color: 'orange',
@@ -11,7 +11,7 @@ export const studies = [
   },
   {
     name: 'Digital Marketing',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     duration: 'December 2018 (5 hours)',
     company: 'Getulio Vargas Foundation',
     color: 'blue',
@@ -22,7 +22,7 @@ export const studies = [
   },
   {
     name: 'Information Technology and Communication',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     duration: 'December 2018 (14 hours)',
     company: 'SENAI',
     color: 'red',
@@ -33,7 +33,7 @@ export const studies = [
   },
   {
     name: 'Search Engine Optimization',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Udemy by Ricardo Zacho',
     duration: 'December 2018 (5 hours)',
     color: 'green',
@@ -44,7 +44,7 @@ export const studies = [
   },
   {
     name: 'Interface Design',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Udemy by Jamilton Damasceno +2',
     duration: 'December 2018 (15 hours)',
     color: 'yellow',
@@ -55,7 +55,7 @@ export const studies = [
   },
   {
     name: 'Bootstrap 4',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Udemy by Ponto Courses',
     duration: 'December 2018 (10,5 hours)',
     color: 'purple',
@@ -66,7 +66,7 @@ export const studies = [
   },
   {
     name: 'Tourism Monitoring',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Forma Turismo',
     duration: 'February 2017 (40 hours)',
     color: 'yellow',
@@ -77,7 +77,7 @@ export const studies = [
   },
   {
     name: 'After Effects',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Puflix',
     duration: 'November 2017 (11 hours)',
     color: 'purple',
@@ -88,7 +88,7 @@ export const studies = [
   },
   {
     name: 'Computer Graphics',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'SAGA',
     duration: 'November 2017 (11 hours)',
     color: 'grey',
@@ -99,7 +99,7 @@ export const studies = [
   },
   {
     name: 'Introduction to Web Design',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg',
+    image: null,
     company: 'Objetiva School',
     duration: 'March 2010',
     color: 'blue',
