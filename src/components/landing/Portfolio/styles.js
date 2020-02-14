@@ -1,10 +1,26 @@
 import styled, { css, keyframes } from 'styled-components';
 
+export const SkillsWrapper = styled.div`
+  overflow: hidden;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+
 export const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 40px;
+  max-width: 1280px;
+  flex: 1;
 
   @media screen and (max-width: 50em) {
     flex-direction: column;
