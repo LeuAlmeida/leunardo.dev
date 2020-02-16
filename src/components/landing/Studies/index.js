@@ -48,11 +48,7 @@ export function Studies() {
           {data.map(item => (
             <CardStudy
               name={item.name}
-              image={
-                item.image
-                  ? resolve(__dirname, 'assets', 'svg', item.image)
-                  : 'https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg'
-              }
+              image={item.image ? resolve(__dirname, 'svg', item.image) : null}
               company={item.company}
               duration={item.duration}
               color={item.color}
