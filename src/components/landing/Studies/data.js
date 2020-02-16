@@ -1,7 +1,7 @@
 export const data = [
   {
     name: "Bachelor's Degree",
-    image: null,
+    image: 'graduation.svg',
     company: 'Universidade Metodista de São Paulo',
     duration: 'December 2020 (4 years) by Universidade Metodista de São Paulo',
     color: 'orange',
@@ -11,7 +11,7 @@ export const data = [
   },
   {
     name: 'Digital Marketing',
-    image: null,
+    image: 'marketing.svg',
     duration: 'December 2018 (5 hours)',
     company: 'Getulio Vargas Foundation',
     color: 'blue',
@@ -22,7 +22,7 @@ export const data = [
   },
   {
     name: 'Information Technology and Communication',
-    image: null,
+    image: 'tic.svg',
     duration: 'December 2018 (14 hours)',
     company: 'SENAI',
     color: 'red',
@@ -33,7 +33,7 @@ export const data = [
   },
   {
     name: 'Search Engine Optimization',
-    image: null,
+    image: 'seo.svg',
     company: 'Udemy by Ricardo Zacho',
     duration: 'December 2018 (5 hours)',
     color: 'green',
@@ -44,7 +44,7 @@ export const data = [
   },
   {
     name: 'Interface Design',
-    image: null,
+    image: 'interface.svg',
     company: 'Udemy by Jamilton Damasceno +2',
     duration: 'December 2018 (15 hours)',
     color: 'yellow',
@@ -55,7 +55,7 @@ export const data = [
   },
   {
     name: 'Bootstrap 4',
-    image: null,
+    image: 'bootstrap.svg',
     company: 'Udemy by Ponto Courses',
     duration: 'December 2018 (10,5 hours)',
     color: 'purple',
@@ -66,7 +66,7 @@ export const data = [
   },
   {
     name: 'Tourism Monitoring',
-    image: null,
+    image: 'forma.svg',
     company: 'Forma Turismo',
     duration: 'February 2017 (40 hours)',
     color: 'yellow',
@@ -77,7 +77,7 @@ export const data = [
   },
   {
     name: 'After Effects',
-    image: null,
+    image: 'after-effects-cc.svg',
     company: 'Puflix',
     duration: 'November 2017 (11 hours)',
     color: 'purple',
@@ -88,7 +88,7 @@ export const data = [
   },
   {
     name: 'Computer Graphics',
-    image: null,
+    image: 'computer-graphic.svg',
     company: 'SAGA',
     duration: 'November 2017 (11 hours)',
     color: 'grey',
