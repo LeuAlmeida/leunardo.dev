@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'components/common';
 import { Details } from 'components/common/Text';
-import dev from 'assets/illustrations/skills.svg';
+import dev from 'assets/vector/vector-cloud.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Wrapper, SkillsWrapper, Thumbnail } from './styles';
 
