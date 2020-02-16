@@ -7,7 +7,7 @@ import { Header } from 'components/theme';
 import { Container, ButtonIcon } from 'components/common';
 import { Details } from 'components/common/Text';
 
-import dev from 'assets/illustrations/dev.svg';
+import dev from 'assets/vector/vector-top.svg';
 import { Wrapper, IntroWrapper, Thumbnail, SocialIcons } from './styles';
 
 const MagicOcean = ['Backend Developer', 'UX & UI Designer'];
