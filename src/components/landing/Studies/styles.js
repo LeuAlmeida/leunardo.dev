@@ -107,7 +107,7 @@ export const SkillCard = styled.div`
     padding: 5px;
   }
   & .orange {
-    background-color: #eb6c3f;
+    background-color: #f06217;
     border-radius: 4px;
     padding: 5px;
   }
@@ -122,17 +122,17 @@ export const SkillCard = styled.div`
     padding: 5px;
   }
   & .purple {
-    background-color: #3f5ceb;
+    background-color: #884a9d;
     border-radius: 4px;
     padding: 5px;
   }
   & .red {
-    background-color: #eb3f3f;
+    background-color: #bd584e;
     border-radius: 4px;
     padding: 5px;
   }
   & .green {
-    background-color: #3feb5c;
+    background-color: #24ae5f;
     border-radius: 4px;
     padding: 5px;
   }
