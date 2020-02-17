@@ -13,7 +13,7 @@ export const Button = styled.button`
   -ms-user-select: none;
   user-select: none;
   color: #fff;
-  background: #0074d9;
+  background: #7078fc;
 
   &:focus {
     outline: none;
@@ -47,7 +47,7 @@ export const ButtonIcon = styled.button`
   -ms-user-select: none;
   user-select: none;
   color: #fff;
-  background: #0074d9;
+  background: #7078fc;
 
   &:not(:first-child) {
     margin-left: 5px;
