@@ -99,7 +99,7 @@ export const data = [
   },
   {
     name: 'Introduction to Web Design',
-    image: null,
+    image: 'webdesign.svg',
     company: 'Objetiva School',
     duration: 'March 2010',
     color: 'blue',
