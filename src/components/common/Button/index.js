@@ -30,7 +30,7 @@ export const Button = styled.button`
 	`}
 `;
 
-export const ButtonIcon = styled.button`
+export const ButtonIcon = styled.a`
   cursor: pointer;
   border-radius: 50%;
   display: flex;
