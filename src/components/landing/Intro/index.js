@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { connect } from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
 import useTypewriter from 'react-typewriter-hook';
@@ -13,7 +14,13 @@ import { Wrapper, IntroWrapper, Thumbnail, SocialIcons } from './styles';
 const MagicOcean = ['Backend Developer', 'UX & UI Designer'];
 let index = 0;
 
-export function Intro() {
+function Intro({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
   const [magicName, setMagicName] = useState('Frontend Developer');
   const intervalRef = useRef({});
   const name = useTypewriter(magicName);
@@ -33,9 +40,15 @@ export function Intro() {
         <Header />
         <IntroWrapper as={Container}>
           <Details>
-            <h1>Hello, I'm Léu Almeida</h1>
-            <h4>I am {name}</h4>
-            <h6>Stalk me in</h6>
+            {lang === 'english' && <h1>Hello, I'm Léu Almeida</h1>}
+            {lang === 'portuguese' && <h1>Olá, sou o Léu Almeida</h1>}
+
+            {lang === 'english' && <h4>I am {name}</h4>}
+            {lang === 'portuguese' && <h4>Eu sou {name}</h4>}
+
+            {lang === 'english' && <h6>Stalk me in</h6>}
+            {lang === 'portuguese' && <h6>Visita-me em</h6>}
+
             <SocialIcons>
               <ButtonIcon
                 href="https://github.com/LeuAlmeida"
@@ -114,3 +127,7 @@ export function Intro() {
     </>
   );
 }
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(Intro);
