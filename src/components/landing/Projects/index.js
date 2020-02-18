@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Card } from 'components/common';
 import starIcon from 'assets/icons/star.svg';
 import forkIcon from 'assets/icons/fork.svg';
 import { Wrapper, Grid, Item, Content, Stats } from './styles';
 
-export const Projects = () => {
+function Projects({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
   const {
     github: {
       viewer: {
@@ -38,7 +46,8 @@ export const Projects = () => {
   );
   return (
     <Wrapper as={Container} id="pinned">
-      <h2>Top Starred Repositories</h2>
+      {lang === 'english' && <h2>Top Starred Repositories</h2>}
+      {lang === 'portuguese' && <h2>Repositórios Mais Favoritados</h2>}
       <Grid>
         {edges.map(({ node }) => (
           <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
@@ -63,4 +72,8 @@ export const Projects = () => {
       </Grid>
     </Wrapper>
   );
-};
+}
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(Projects);
