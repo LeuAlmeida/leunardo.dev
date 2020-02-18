@@ -78,7 +78,8 @@ function Personal({ language }) {
 
         <InterestSection>
           <Details>
-            <h3>Languages</h3>
+            {lang === 'english' && <h3>Languages</h3>}
+            {lang === 'portuguese' && <h3>Idiomas</h3>}
           </Details>
 
           <LanguageCounter />

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { Form, withFormik, FastField, ErrorMessage } from 'formik';
 import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
@@ -6,80 +7,89 @@ import { Button, Input } from 'components/common';
 import { recaptcha_key } from 'data/config';
 import { Error, Center, InputField } from './styles';
 
-const ContactForm = ({ setFieldValue, isSubmitting, values, errors, touched }) => (
-  <Form
-    name="portfolio-dev"
-    method="post"
-    data-netlify="true"
-    data-netlify-recaptcha="true"
-    data-netlify-honeypot="bot-field"
-  >
-    <InputField>
-      <Input
-        as={FastField}
-        type="text"
-        name="name"
-        component="input"
-        aria-label="name"
-        placeholder="Full name*"
-        error={touched.name && errors.name}
-      />
-      <ErrorMessage component={Error} name="name" />
-    </InputField>
-    <InputField>
-      <Input
-        id="email"
-        aria-label="email"
-        component="input"
-        as={FastField}
-        type="email"
-        name="email"
-        placeholder="Email*"
-        error={touched.email && errors.email}
-      />
-      <ErrorMessage component={Error} name="email" />
-    </InputField>
-    <InputField>
-      <Input
-        as={FastField}
-        component="textarea"
-        aria-label="message"
-        id="message"
-        rows="8"
-        type="text"
-        name="message"
-        placeholder="Message*"
-        error={touched.message && errors.message}
-      />
-      <ErrorMessage component={Error} name="message" />
-    </InputField>
-    {values.name && values.email && values.message && (
-      <InputField>
-        <FastField
-          component={Recaptcha}
-          sitekey={recaptcha_key}
-          name="recaptcha"
-          onChange={value => setFieldValue('recaptcha', value)}
-        />
-        <ErrorMessage component={Error} name="recaptcha" />
-      </InputField>
-    )}
-    {values.success && (
-      <InputField>
-        <Center>
-          <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
-        </Center>
-      </InputField>
-    )}
-    <Center>
-      <Button secondary type="submit" disabled={isSubmitting}>
-        Submit
-      </Button>
-    </Center>
-  </Form>
-);
+function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, language }) {
+  const [lang, setLang] = useState('english');
 
-export default withFormik({
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
+  return (
+    <Form
+      name="portfolio-dev"
+      method="post"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <InputField>
+        <Input
+          as={FastField}
+          type="text"
+          name="name"
+          component="input"
+          aria-label="name"
+          placeholder={(lang === 'english' && 'Full name*') || (lang === 'portuguese' && 'Nome completo*')}
+          error={touched.name && errors.name}
+        />
+        <ErrorMessage component={Error} name="name" />
+      </InputField>
+      <InputField>
+        <Input
+          id="email"
+          aria-label="email"
+          component="input"
+          as={FastField}
+          type="email"
+          name="email"
+          placeholder={(lang === 'english' && 'Email*') || (lang === 'portuguese' && 'E-mail*')}
+          error={touched.email && errors.email}
+        />
+        <ErrorMessage component={Error} name="email" />
+      </InputField>
+      <InputField>
+        <Input
+          as={FastField}
+          component="textarea"
+          aria-label="message"
+          id="message"
+          rows="8"
+          type="text"
+          name="message"
+          placeholder={(lang === 'english' && 'Message*') || (lang === 'portuguese' && 'Mensagem*')}
+          error={touched.message && errors.message}
+        />
+        <ErrorMessage component={Error} name="message" />
+      </InputField>
+      {values.name && values.email && values.message && (
+        <InputField>
+          <FastField
+            component={Recaptcha}
+            sitekey={recaptcha_key}
+            name="recaptcha"
+            onChange={value => setFieldValue('recaptcha', value)}
+          />
+          <ErrorMessage component={Error} name="recaptcha" />
+        </InputField>
+      )}
+      {values.success && (
+        <InputField>
+          <Center>
+            <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
+          </Center>
+        </InputField>
+      )}
+      <Center>
+        <Button secondary type="submit" disabled={isSubmitting}>
+          {lang === 'english' && 'Submit'}
+          {lang === 'portuguese' && 'Enviar'}
+        </Button>
+      </Center>
+    </Form>
+  );
+}
+
+const formikForm = withFormik({
   mapPropsToValues: () => ({
     name: '',
     email: '',
@@ -123,3 +133,7 @@ export default withFormik({
     }
   },
 })(ContactForm);
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(formikForm);

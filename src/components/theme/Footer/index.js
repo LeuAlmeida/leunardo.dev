@@ -19,7 +19,7 @@ function Footer({ language }) {
           <h2>Léu Almeida</h2>
           {lang === 'english' && (
             <span>
-              © Copyrights {new Date().getFullYear()} | Made with{' '}
+              © Copyright {new Date().getFullYear()} | Made with{' '}
               <span aria-label="love" role="img">
                 💖
               </span>{' '}
@@ -32,7 +32,7 @@ function Footer({ language }) {
           )}
           {lang === 'portuguese' && (
             <span>
-              © Copyrights {new Date().getFullYear()} | Feito com{' '}
+              © Copyright {new Date().getFullYear()} | Feito com{' '}
               <span aria-label="love" role="img">
                 💖
               </span>{' '}
