@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { connect } from 'react-redux';
-import { confirmAlert } from 'react-confirm-alert'; // Import
 import { Menu } from './styles';
 
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import 'react-toastify/dist/ReactToastify.css';
 
 function FloatMenu(props) {
