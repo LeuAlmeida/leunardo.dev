@@ -1,11 +1,78 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-
+import { connect } from 'react-redux';
 import { Menu } from './styles';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-function FloatMenu() {
+function FloatMenu(props) {
+  const [lang, setLang] = useState('');
+
+  useEffect(() => {
+    const { dispatch } = props;
+
+    let currentLang;
+
+    const userlang = navigator.language || navigator.userLanguage;
+    if (userlang === 'pt-BR' || userlang === 'pt') {
+      currentLang = 'portuguese';
+    } else if (userlang === 'de') {
+      currentLang = 'germany';
+    } else {
+      currentLang = 'english';
+    }
+
+    dispatch({
+      type: 'SET_LANGUAGE',
+      language: currentLang,
+    });
+  }, [props]);
+
+  function setAsLanguage(language) {
+    if (language === 'portuguese') {
+      const { dispatch } = props;
+      dispatch({
+        type: 'SET_LANGUAGE',
+        language,
+      });
+
+      if (lang === 'portuguese') {
+        toast.info(`Você já está aqui. 😜`);
+        return null;
+      }
+
+      toast.success(`Bem-vindo ao meu site!`);
+      setLang('portuguese');
+    }
+
+    if (language === 'english') {
+      const { dispatch } = props;
+      dispatch({
+        type: 'SET_LANGUAGE',
+        language,
+      });
+
+      if (lang === 'english') {
+        toast.info(`You're already here. 😜`);
+        return null;
+      }
+
+      toast.success(`Welcome to my site!`);
+      setLang('english');
+    }
+
+    if (language === 'germany') {
+      if (lang === 'english') {
+        toast.error(`German translation doesn't available yet. 😓`);
+        return null;
+      }
+      if (lang === 'portuguese') {
+        toast.error(`O idioma alemão ainda não está disponível. 😓`);
+        return null;
+      }
+    }
+  }
+
   return (
     <>
       <ToastContainer autoClose={4000} />
@@ -17,29 +84,25 @@ function FloatMenu() {
           <span className="hamburger hamburger-3"></span>
         </label>
 
-        <button
-          onClick={() => toast.error(`Portuguese translation doesn't available yet. 😓`)}
-          type="button"
-          className="menu-item"
-        >
+        <button onClick={() => setAsLanguage('portuguese')} type="button" className="menu-item">
           {' '}
           🇧🇷
         </button>
-        <button type="button" onClick={() => toast.info(`Do you're already here. 😜`)} className="menu-item">
+
+        <button type="button" onClick={() => setAsLanguage('english')} className="menu-item">
           {' '}
           🇬🇧
         </button>
-        <button
-          type="button"
-          onClick={() => toast.error(`German translation doesn't available yet. 😓`)}
-          className="menu-item"
-        >
+        <button type="button" onClick={() => setAsLanguage('germany')} className="menu-item">
           {' '}
           🇩🇪
         </button>
         <a
           href="mailto:leo@webid.net.br"
-          onClick={() => toast.success(`Redirecting you to contact me via email. 📨`)}
+          onClick={() => {
+            lang === 'english' && toast.success(`Redirecting you to contact me via email. 📨`);
+            lang === 'portuguese' && toast.success(`Te redirecionando para falar comigo via e-mail. 📨`);
+          }}
           className="menu-item"
         >
           {' '}
@@ -49,7 +112,10 @@ function FloatMenu() {
           href="https://api.whatsapp.com/send?phone=5511938045313"
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => toast.success(`Redirecting you to contact me via WhatsApp. 📞`)}
+          onClick={() => {
+            lang === 'english' && toast.success(`Redirecting you to contact me via WhatsApp. 📞`);
+            lang === 'portuguese' && toast.success(`Te redirecionando para falar comigo via WhatsApp. 📞`);
+          }}
           className="menu-item"
         >
           {' '}
@@ -84,4 +150,4 @@ function FloatMenu() {
   );
 }
 
-export default FloatMenu;
+export default connect()(FloatMenu);

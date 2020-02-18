@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+
 import { Container } from 'components/common';
 import CardInterests from 'components/common/CardInterests';
 import { Wrapper, SkillsWrapper, InterestSection } from './styles';
@@ -8,68 +10,112 @@ import About from './About';
 import LanguageCounter from '../../common/LanguageCounter';
 import Techs from './Techs';
 
-export const Personal = () => (
-  <Wrapper>
-    <SkillsWrapper as={Container}>
-      <About />
-    </SkillsWrapper>
+function Personal({ language }) {
+  const [lang, setLang] = useState('english');
 
-    <SkillsWrapper as={Container}>
-      <TitleWrapper>
-        <H2>About Me</H2>
-        <SubTitle>Professional</SubTitle>
-      </TitleWrapper>
-      <InterestSection>
-        <Details>
-          <h3>Interests</h3>
-        </Details>
-        <CardInterests
-          name="Freelances"
-          subtitle="available."
-          submit={() => {
-            alert('Freela!');
-          }}
-        />
-        <CardInterests
-          name="In loco"
-          subtitle="only to Germany."
-          cardNumber="card2"
-          submit={() => {
-            alert('Germany!');
-          }}
-        />
-      </InterestSection>
-    </SkillsWrapper>
-    <SkillsWrapper as={Container}>
-      <TitleWrapper>
-        <H2>My i18n</H2>
-        <SubTitle>Who I am</SubTitle>
-      </TitleWrapper>
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
 
-      <InterestSection>
-        <Details>
-          <h3>Languages</h3>
-        </Details>
+  return (
+    <Wrapper>
+      <SkillsWrapper as={Container}>
+        <About />
+      </SkillsWrapper>
 
-        <LanguageCounter />
-      </InterestSection>
-    </SkillsWrapper>
+      <SkillsWrapper as={Container}>
+        <TitleWrapper>
+          {lang === 'english' && (
+            <>
+              <H2>About Me</H2>
+              <SubTitle>Professional</SubTitle>
+            </>
+          )}
+          {lang === 'portuguese' && (
+            <>
+              <H2>Sobre Mim</H2>
+              <SubTitle>Profissional</SubTitle>
+            </>
+          )}
+        </TitleWrapper>
+        <InterestSection>
+          <Details>
+            {lang === 'english' && <h3>Interests</h3>}
+            {lang === 'portuguese' && <h3>Interesses</h3>}
+          </Details>
+          <CardInterests
+            name="Freelances"
+            subtitle={(lang === 'english' && 'available.') || (lang === 'portuguese' && 'disponível')}
+            submit={() => {
+              alert('Freela!');
+            }}
+          />
+          <CardInterests
+            name={(lang === 'english' && 'In loco') || (lang === 'portuguese' && 'Alocado')}
+            subtitle={(lang === 'english' && 'only to Germany.') || (lang === 'portuguese' && 'apenas Alemanha.')}
+            cardNumber="card2"
+            submit={() => {
+              alert('Germany!');
+            }}
+          />
+        </InterestSection>
+      </SkillsWrapper>
+      <SkillsWrapper as={Container}>
+        <TitleWrapper>
+          {lang === 'english' && (
+            <>
+              <H2>My i18n</H2>
+              <SubTitle>Who I am</SubTitle>
+            </>
+          )}
+          {lang === 'portuguese' && (
+            <>
+              <H2>Meu i18n</H2>
+              <SubTitle>Quem sou eu</SubTitle>
+            </>
+          )}
+        </TitleWrapper>
 
-    <SkillsWrapper as={Container} style={{ paddingTop: '4rem', paddingBottom: 0 }}>
-      <TitleWrapper>
-        <H2>#Techs</H2>
-        <SubTitle>About Me</SubTitle>
-      </TitleWrapper>
+        <InterestSection>
+          <Details>
+            <h3>Languages</h3>
+          </Details>
 
-      <InterestSection>
-        <Details>
-          <h3>Technical Skills</h3>
-        </Details>
-      </InterestSection>
-    </SkillsWrapper>
+          <LanguageCounter />
+        </InterestSection>
+      </SkillsWrapper>
 
-    <SkillsWrapper as={Container} style={{ paddingBottom: '4rem' }}>
-      <Techs />
-    </SkillsWrapper>
-  </Wrapper>
-);
+      <SkillsWrapper as={Container} style={{ paddingTop: '4rem', paddingBottom: 0 }}>
+        <TitleWrapper>
+          {lang === 'english' && (
+            <>
+              <H2>#Techs</H2>
+              <SubTitle>About Me</SubTitle>
+            </>
+          )}
+          {lang === 'portuguese' && (
+            <>
+              <H2>#Tecnologias</H2>
+              <SubTitle>Sobre Mim</SubTitle>
+            </>
+          )}
+        </TitleWrapper>
+
+        <InterestSection>
+          <Details>
+            {lang === 'english' && <h3>Technical Skills</h3>}
+            {lang === 'portuguese' && <h3>Habilidades Técnicas</h3>}
+          </Details>
+        </InterestSection>
+      </SkillsWrapper>
+
+      <SkillsWrapper as={Container} style={{ paddingBottom: '4rem' }}>
+        <Techs />
+      </SkillsWrapper>
+    </Wrapper>
+  );
+}
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(Personal);
