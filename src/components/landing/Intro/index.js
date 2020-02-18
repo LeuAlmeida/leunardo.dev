@@ -37,22 +37,58 @@ export function Intro() {
             <h4>I am {name}</h4>
             <h6>Stalk me in</h6>
             <SocialIcons>
-              <ButtonIcon href="https://github.com/LeuAlmeida" data-tip data-for="github">
+              <ButtonIcon
+                href="https://github.com/LeuAlmeida"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="github"
+              >
                 <FaGithub color="#FFF" size={18} />
               </ButtonIcon>
-              <ButtonIcon href="https://www.behance.net/almeida99" data-tip data-for="behance">
+              <ButtonIcon
+                href="https://www.behance.net/almeida99"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="behance"
+              >
                 <FaBehance color="#FFF" size={18} />
               </ButtonIcon>
-              <ButtonIcon href="https://www.linkedin.com/in/leonardoalmeida99/" data-tip data-for="linkedin">
+              <ButtonIcon
+                href="https://www.linkedin.com/in/leonardoalmeida99/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="linkedin"
+              >
                 <FaLinkedin color="#FFF" size={18} />
               </ButtonIcon>
-              <ButtonIcon href="https://www.instagram.com/1bigo/" data-tip data-for="instagram">
+              <ButtonIcon
+                href="https://www.instagram.com/1bigo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="instagram"
+              >
                 <FaInstagram color="#FFF" size={18} />
               </ButtonIcon>
-              <ButtonIcon href="https://www.facebook.com/leuzinhopataty" data-tip data-for="facebook">
+              <ButtonIcon
+                href="https://www.facebook.com/leuzinhopataty"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="facebook"
+              >
                 <FaFacebookF color="#FFF" size={18} />
               </ButtonIcon>
-              <ButtonIcon href="https://leunardo.dev/cv" data-tip data-for="cv">
+              <ButtonIcon
+                href="https://leunardo.dev/cv"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tip
+                data-for="cv"
+              >
                 <FaFilePdf color="#FFF" size={18} />
               </ButtonIcon>
             </SocialIcons>
