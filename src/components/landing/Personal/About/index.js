@@ -1,56 +1,122 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { FaCode, FaCoffee, FaMusic, FaTv, FaDumbbell, FaPencilRuler, FaBook, FaGamepad } from 'react-icons/fa';
 import { TastesQuirksRow, TasteOrQuirk } from './styles';
 import { Details, TitleWrapper, H2, SubTitle } from '../../../common/Text';
 
-export default function About() {
+function About({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
   return (
     <>
       <TitleWrapper>
-        <H2>About Me</H2>
-        <SubTitle>Personal</SubTitle>
+        {lang === 'english' && (
+          <>
+            <H2>About Me</H2>
+            <SubTitle>Personal</SubTitle>
+          </>
+        )}
+        {lang === 'portuguese' && (
+          <>
+            <H2>Sobre Mim</H2>
+            <SubTitle>Pessoal</SubTitle>
+          </>
+        )}
       </TitleWrapper>
       <Details>
-        <h3>Tastes and Quirks</h3>
+        {lang === 'english' && (
+          <>
+            <h3>Tastes and Quirks</h3>
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaCode color="#333" size={64} />
+                <span>Code</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaCoffee color="#333" size={64} />
+                <span>Coffee</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaMusic color="#333" size={64} />
+                <span>Music</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaTv color="#333" size={64} />
+                <span>Series</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
 
-        <TastesQuirksRow>
-          <TasteOrQuirk>
-            <FaCode color="#333" size={64} />
-            <span>Code</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaCoffee color="#333" size={64} />
-            <span>Coffee</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaMusic color="#333" size={64} />
-            <span>Music</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaTv color="#333" size={64} />
-            <span>Series</span>
-          </TasteOrQuirk>
-        </TastesQuirksRow>
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaDumbbell color="#333" size={64} />
+                <span>Workout</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaPencilRuler color="#333" size={64} />
+                <span>Studying</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaBook color="#333" size={64} />
+                <span>Books</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaGamepad color="#333" size={64} />
+                <span>Games</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
+          </>
+        )}
+        {lang === 'portuguese' && (
+          <>
+            <h3>Gostos e Peculiariedades</h3>
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaCode color="#333" size={64} />
+                <span>Código</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaCoffee color="#333" size={64} />
+                <span>Café</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaMusic color="#333" size={64} />
+                <span>Música</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaTv color="#333" size={64} />
+                <span>Séries</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
 
-        <TastesQuirksRow>
-          <TasteOrQuirk>
-            <FaDumbbell color="#333" size={64} />
-            <span>Workout</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaPencilRuler color="#333" size={64} />
-            <span>Studying</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaBook color="#333" size={64} />
-            <span>Books</span>
-          </TasteOrQuirk>
-          <TasteOrQuirk>
-            <FaGamepad color="#333" size={64} />
-            <span>Games</span>
-          </TasteOrQuirk>
-        </TastesQuirksRow>
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaDumbbell color="#333" size={64} />
+                <span>Treinos</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaPencilRuler color="#333" size={64} />
+                <span>Estudos</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaBook color="#333" size={64} />
+                <span>Livros</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaGamepad color="#333" size={64} />
+                <span>Jogos</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
+          </>
+        )}
       </Details>
     </>
   );
 }
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(About);
