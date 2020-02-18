@@ -51,10 +51,8 @@ function Personal({ language }) {
             }}
           />
           <CardInterests
-            name="In loco"
-            subtitle={
-              (lang === 'english' && 'only to Germany.') || (lang === 'portuguese' && 'apenas para a Alemanha.')
-            }
+            name={(lang === 'english' && 'In loco') || (lang === 'portuguese' && 'Alocado')}
+            subtitle={(lang === 'english' && 'only to Germany.') || (lang === 'portuguese' && 'apenas Alemanha.')}
             cardNumber="card2"
             submit={() => {
               alert('Germany!');
@@ -72,7 +70,7 @@ function Personal({ language }) {
           )}
           {lang === 'portuguese' && (
             <>
-              <H2>i18n Pessoal</H2>
+              <H2>Meu i18n</H2>
               <SubTitle>Quem sou eu</SubTitle>
             </>
           )}
