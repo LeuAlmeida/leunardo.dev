@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import { Container } from 'components/common';
@@ -6,23 +6,43 @@ import { Details } from 'components/common/Text';
 import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
 import { Wrapper, Flex, Links } from './styles';
 
-function Footer() {
+function Footer({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
   return (
     <Wrapper>
       <Flex as={Container}>
         <Details>
           <h2>Léu Almeida</h2>
-          <span>
-            © Copyrights {new Date().getFullYear()} | Made with{' '}
-            <span aria-label="love" role="img">
-              💖
-            </span>{' '}
-            and{' '}
-            <span aria-label="love" role="img">
-              ☕
-            </span>{' '}
-            by <a href="mailto:leo@webid.net.br">Léu Almeida</a>
-          </span>
+          {lang === 'english' && (
+            <span>
+              © Copyrights {new Date().getFullYear()} | Made with{' '}
+              <span aria-label="love" role="img">
+                💖
+              </span>{' '}
+              and{' '}
+              <span aria-label="love" role="img">
+                ☕
+              </span>{' '}
+              by <a href="mailto:leo@webid.net.br">Léu Almeida</a>
+            </span>
+          )}
+          {lang === 'portuguese' && (
+            <span>
+              © Copyrights {new Date().getFullYear()} | Feito com{' '}
+              <span aria-label="love" role="img">
+                💖
+              </span>{' '}
+              e{' '}
+              <span aria-label="love" role="img">
+                ☕
+              </span>{' '}
+              por <a href="mailto:leo@webid.net.br">Léu Almeida</a>
+            </span>
+          )}
         </Details>
         <Links>
           <a href="https://github.com/LeuAlmeida" target="_blank" rel="noopener noreferrer" data-tip data-for="github">
@@ -74,5 +94,5 @@ function Footer() {
 }
 
 export default connect(state => ({
-  language: state.language,
+  language: state.portuguese,
 }))(Footer);
