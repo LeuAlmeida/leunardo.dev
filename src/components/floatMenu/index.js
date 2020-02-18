@@ -1,17 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import { connect } from 'react-redux';
-
+import { confirmAlert } from 'react-confirm-alert'; // Import
 import { Menu } from './styles';
 
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import 'react-toastify/dist/ReactToastify.css';
 
 function FloatMenu(props) {
   const [lang, setLang] = useState('');
 
   useEffect(() => {
-    setLang('english');
-  }, []);
+    const { dispatch } = props;
+
+    let currentLang;
+
+    const userlang = navigator.language || navigator.userLanguage;
+    if (userlang === 'pt-BR' || userlang === 'pt') {
+      currentLang = 'portuguese';
+    } else if (userlang === 'de') {
+      currentLang = 'germany';
+    } else {
+      currentLang = 'english';
+    }
+
+    dispatch({
+      type: 'SET_LANGUAGE',
+      language: currentLang,
+    });
+  }, [props]);
 
   function setAsLanguage(language) {
     if (language === 'portuguese') {
