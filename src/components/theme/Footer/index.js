@@ -73,4 +73,6 @@ function Footer() {
   );
 }
 
-export default connect()(Footer);
+export default connect(state => ({
+  language: state.language,
+}))(Footer);
