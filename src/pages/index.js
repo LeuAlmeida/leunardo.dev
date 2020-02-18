@@ -1,3 +1,5 @@
+import '../config/ReactotronConfig';
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Layout, SEO } from 'components/common';
