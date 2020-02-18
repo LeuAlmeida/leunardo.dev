@@ -10,7 +10,7 @@ export const Footer = () => (
       <Details>
         <h2>Léu Almeida</h2>
         <span>
-          © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
+          © Copyrights {new Date().getFullYear()} | Made with{' '}
           <span aria-label="love" role="img">
             💖
           </span>{' '}
@@ -18,10 +18,7 @@ export const Footer = () => (
           <span aria-label="love" role="img">
             ☕
           </span>{' '}
-          by{' '}
-          <a href="https://smakosh.com/?ref=portfolio-dev" rel="noopener noreferrer" target="_blank">
-            Léu Almeida
-          </a>
+          by <a href="mailto:leo@webid.net.br">Léu Almeida</a>
         </span>
       </Details>
       <Links>
@@ -64,7 +61,7 @@ export const Footer = () => (
         >
           <FaFacebookF color="#000" size={16} />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" data-tip data-for="cv">
+        <a href="https://leunardo.dev/cv" target="_blank" rel="noopener noreferrer" data-tip data-for="cv">
           <FaFilePdf color="#000" size={16} />
         </a>
       </Links>
