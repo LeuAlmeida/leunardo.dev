@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { resolve } from 'path';
+
 import { TitleWrapper, H2, SubTitle, Details } from '../../common/Text';
 import { Container, SkillCard, CardsSection } from './styles';
 
@@ -35,33 +37,78 @@ function CardStudy({ color, image, name, company, duration, description, certifi
   );
 }
 
-export function Studies() {
+function Studies({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+    console.log(language);
+  }, [lang, language]);
+
   return (
     <Container>
       <TitleWrapper>
-        <H2>Hello World</H2>
-        <SubTitle>Studies</SubTitle>
+        {lang === 'english' && (
+          <>
+            <H2>Hello World</H2>
+            <SubTitle>Studies</SubTitle>
+          </>
+        )}
+        {lang === 'portuguese' && (
+          <>
+            <H2>Olá Mundo</H2>
+            <SubTitle>Estudos</SubTitle>
+          </>
+        )}
       </TitleWrapper>
-      <Details>
-        <h3>Certificates and Courses</h3>
-        <CardsSection>
-          {data.map(item => (
-            <CardStudy
-              key={item.name}
-              name={item.name}
-              image={item.image ? resolve(__dirname, 'svg', item.image) : null}
-              company={item.company}
-              duration={item.duration}
-              color={item.color}
-              description={item.description}
-              certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
-            />
-          ))}
-        </CardsSection>
-      </Details>
+      {lang === 'english' && (
+        <>
+          <Details>
+            <h3>Certificates and Courses</h3>
+            <CardsSection>
+              {data.english.map(item => (
+                <CardStudy
+                  key={item.name}
+                  name={item.name}
+                  image={item.image ? resolve(__dirname, 'svg', item.image) : null}
+                  company={item.company}
+                  duration={item.duration}
+                  color={item.color}
+                  description={item.description}
+                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                />
+              ))}
+            </CardsSection>
+          </Details>
+        </>
+      )}
+      {lang === 'portuguese' && (
+        <>
+          <Details>
+            <h3>Cursos e Certificados</h3>
+            <CardsSection>
+              {data.portuguese.map(item => (
+                <CardStudy
+                  key={item.name}
+                  name={item.name}
+                  image={item.image ? resolve(__dirname, 'svg', item.image) : null}
+                  company={item.company}
+                  duration={item.duration}
+                  color={item.color}
+                  description={item.description}
+                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                />
+              ))}
+            </CardsSection>
+          </Details>
+        </>
+      )}
     </Container>
   );
 }
+export default connect(state => ({
+  language: state.portuguese,
+}))(Studies);
 
 CardStudy.propTypes = {
   color: PropTypes.string,
