@@ -28,6 +28,10 @@ export const SubTitle = styled.span`
   font-size: 14px;
   font-weight: bold;
   color: #666;
+
+  @media only screen and (max-width: 960px) {
+    font-size: 16px;
+  }
 `;
 
 export const Details = styled.div`
@@ -55,13 +59,14 @@ export const Details = styled.div`
     font-weight: 400;
   }
 
-  @media (max-width: 960px) {
+  @media only screen and (max-width: 960px) {
     padding-left: unset;
     width: 100%;
-  }
-
-  @media only screen and (max-width: 960px) {
     padding-top: 4rem;
+
+    h3 {
+      padding-left: 5px;
+    }
 
     h1,
     h4 {
@@ -69,7 +74,11 @@ export const Details = styled.div`
     }
 
     h4 {
-      font-size: 26pt;
+      font-size: 18pt;
+    }
+
+    h6 {
+      font-size: 12pt;
     }
   }
 
