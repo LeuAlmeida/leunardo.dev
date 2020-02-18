@@ -47,6 +47,7 @@ export function Studies() {
         <CardsSection>
           {data.map(item => (
             <CardStudy
+              key={item.name}
               name={item.name}
               image={item.image ? resolve(__dirname, 'svg', item.image) : null}
               company={item.company}
