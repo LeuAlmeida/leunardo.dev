@@ -2,9 +2,23 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   a {
-    color: #6d6d6d;
     font-weight: bold;
     text-decoration: none;
+    margin: 0px 8px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  button {
+    border: 0;
+    background: 0;
+    cursor: pointer;
+
+    display: unset;
+
+    @media only screen and (max-width: 960px) {
+      display: none;
+    }
   }
 
   ${({ desktop }) =>
