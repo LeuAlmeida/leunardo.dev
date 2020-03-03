@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import { connect } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { connect, useDispatch } from 'react-redux';
 import { Menu } from './styles';
-
-import 'react-toastify/dist/ReactToastify.css';
 
 function FloatMenu(props) {
   const [lang, setLang] = useState('');
 
-  useEffect(() => {
-    const { dispatch } = props;
+  const dispatch = useDispatch();
 
+  useEffect(() => {
     let currentLang;
 
     const userlang = navigator.language || navigator.userLanguage;
@@ -26,11 +24,10 @@ function FloatMenu(props) {
       type: 'SET_LANGUAGE',
       language: currentLang,
     });
-  }, [props]);
+  }, [dispatch, props]);
 
   function setAsLanguage(language) {
     if (language === 'portuguese') {
-      const { dispatch } = props;
       dispatch({
         type: 'SET_LANGUAGE',
         language,
@@ -46,7 +43,6 @@ function FloatMenu(props) {
     }
 
     if (language === 'english') {
-      const { dispatch } = props;
       dispatch({
         type: 'SET_LANGUAGE',
         language,
@@ -75,7 +71,6 @@ function FloatMenu(props) {
 
   return (
     <>
-      <ToastContainer autoClose={4000} />
       <Menu>
         <input type="checkbox" href="#" className="menu-open" name="menu-open" id="menu-open" />
         <label className="menu-open-button" htmlFor="menu-open">
