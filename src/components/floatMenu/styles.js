@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Menu = styled.nav`
+  display: none;
+
+  @media only screen and (max-width: 960px) {
+    display: flex;
+  }
+
   -webkit-filter: url('#shadowed-goo');
   filter: url('#shadowed-goo');
   z-index: 99999;
@@ -9,8 +15,8 @@ export const Menu = styled.nav`
   bottom: 0;
   right: 0;
   padding-top: 30px;
-  width: 180px;
-  height: 115px;
+  width: calc(50%);
+  height: 125px;
   box-sizing: border-box;
   font-size: 20px;
   text-align: left;
