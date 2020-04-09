@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import { HeaderContainer, FilterWrapper, FilterItem, Container, Grid, PortfolioWrapper, SkillsWrapper } from './styles';
 import ImagePortfolio from '../../common/ImagePortfolio';
 import { TitleWrapper, H2, SubTitle } from '../../common/Text';
 import { portfolio } from './portfolio';
 
-export const Portfolio = () => {
+function Portfolio({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
   const [filter, setFilter] = useState('all');
   const [projects, setProjects] = useState([]);
 
@@ -26,13 +33,30 @@ export const Portfolio = () => {
       <SkillsWrapper as={Container} id="portfolio">
         <HeaderContainer>
           <TitleWrapper style={{ marginLeft: '10%' }}>
-            <H2>Portfólio</H2>
-            <SubTitle>Recent Jobs</SubTitle>
+            {lang === 'english' && (
+              <>
+                <H2>Portfolio</H2>
+                <SubTitle>Recent Jobs</SubTitle>
+              </>
+            )}
+            {lang === 'portuguese' && (
+              <>
+                <H2>Portfólio</H2>
+                <SubTitle>Trabalhos Recentes</SubTitle>
+              </>
+            )}
           </TitleWrapper>
           <FilterWrapper>
-            <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
-              All
-            </FilterItem>
+            {lang === 'english' && (
+              <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
+                All
+              </FilterItem>
+            )}
+            {lang === 'portuguese' && (
+              <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
+                Todos
+              </FilterItem>
+            )}
             <FilterItem active={filter === 'frontend'} onClick={() => setFilter('frontend')}>
               Frontend
             </FilterItem>
@@ -45,9 +69,16 @@ export const Portfolio = () => {
             <FilterItem active={filter === 'ux-ui'} onClick={() => setFilter('ux-ui')}>
               UX/UI
             </FilterItem>
-            <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
-              Others
-            </FilterItem>
+            {lang === 'english' && (
+              <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
+                Others
+              </FilterItem>
+            )}
+            {lang === 'portuguese' && (
+              <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
+                Outros
+              </FilterItem>
+            )}
           </FilterWrapper>
         </HeaderContainer>
       </SkillsWrapper>
@@ -75,4 +106,8 @@ export const Portfolio = () => {
       </PortfolioWrapper>
     </>
   );
-};
+}
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(Portfolio);

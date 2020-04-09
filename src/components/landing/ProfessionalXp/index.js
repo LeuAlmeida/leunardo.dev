@@ -1,41 +1,73 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import Timeline from '../../common/Timeline';
 import { TitleWrapper, H2, SubTitle, Details } from '../../common/Text';
 import { Container } from './styles';
 
 import { jobs } from './jobs';
 
-export function ProfessionalXp() {
+function ProfessionalXp({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
   return (
     <>
       <Container id="experience">
         <TitleWrapper>
-          <H2>#SendJobs</H2>
-          <SubTitle>Past Jobs</SubTitle>
+          {lang === 'english' && (
+            <>
+              <H2>#SendJobs</H2>
+              <SubTitle>Past Jobs</SubTitle>
+            </>
+          )}
+          {lang === 'portuguese' && (
+            <>
+              <H2>#MandaJobs</H2>
+              <SubTitle>Profissional</SubTitle>
+            </>
+          )}
         </TitleWrapper>
         <Details>
-          <h3>Professional Experience</h3>
+          {lang === 'english' && <h3>Professional Experience</h3>}
+          {lang === 'portuguese' && <h3>Experiência Profissional</h3>}
           <div className="box">
             <ul id="first-list">
               <Timeline
-                title="Opportunity in Germany"
+                title={
+                  (lang === 'english' && 'Opportunity in Germany') ||
+                  (lang === 'portuguese' && 'Oportunidade na Alemanha')
+                }
                 description=""
                 company=""
                 start="JAN, 2021"
-                end="BEYOND"
+                end={(lang === 'english' && 'BEYOND') || (lang === 'portuguese' && 'P/ SEMPRE')}
                 supEnd=""
                 future
               />
-              {jobs.map(job => (
-                <Timeline
-                  key={job.title}
-                  title={job.title}
-                  description={job.description}
-                  company={job.company}
-                  start={job.start}
-                  end={job.end}
-                />
-              ))}
+              {lang === 'english' &&
+                jobs.english.map(job => (
+                  <Timeline
+                    key={job.title}
+                    title={job.title}
+                    description={job.description}
+                    company={job.company}
+                    start={job.start}
+                    end={job.end}
+                  />
+                ))}
+              {lang === 'portuguese' &&
+                jobs.portuguese.map(job => (
+                  <Timeline
+                    key={job.title}
+                    title={job.title}
+                    description={job.description}
+                    company={job.company}
+                    start={job.start}
+                    end={job.end}
+                  />
+                ))}
             </ul>
           </div>
         </Details>
@@ -43,3 +75,7 @@ export function ProfessionalXp() {
     </>
   );
 }
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(ProfessionalXp);

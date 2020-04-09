@@ -1,25 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { Progress } from 'semantic-ui-react';
 import { Container, CountPs } from './styles';
 
 import 'semantic-ui-css/semantic.min.css';
 
-function LanguageCounter() {
+function LanguageCounter({ language }) {
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
+
   return (
     <>
       <Container inverted style={{ flex: 1, minWidth: 300 }}>
         <Progress percent={100} active inverted success size="large">
-          Portuguese (Native)
+          {lang === 'english' && 'Portuguese (Native)'}
+          {lang === 'portuguese' && 'Português (Nativo)'}
         </Progress>
         <Progress percent={75} inverted success size="large">
-          English (Intermediate / Advanced)
+          {lang === 'english' && 'English (Intermediate / Advanced)'}
+          {lang === 'portuguese' && 'Inglês (Intermediário / Avançado)'}
         </Progress>
         <Progress percent={15} inverted warning size="large">
-          Germany (Basic) <CountPs>Exchange in July</CountPs>
+          {lang === 'english' && (
+            <>
+              German (Basic) <CountPs>Exchange in July</CountPs>
+            </>
+          )}
+          {lang === 'portuguese' && (
+            <>
+              Alemão (Básico) <CountPs>Intercambio em Julho</CountPs>
+            </>
+          )}
         </Progress>
       </Container>
     </>
   );
 }
 
-export default LanguageCounter;
+export default connect(state => ({
+  language: state.portuguese,
+}))(LanguageCounter);

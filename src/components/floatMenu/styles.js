@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 
 export const Menu = styled.nav`
+  display: none;
+
+  @media only screen and (max-width: 960px) {
+    display: flex;
+  }
+
   -webkit-filter: url('#shadowed-goo');
   filter: url('#shadowed-goo');
   z-index: 99999;
@@ -9,15 +15,15 @@ export const Menu = styled.nav`
   bottom: 0;
   right: 0;
   padding-top: 30px;
-  width: 180px;
-  height: 115px;
+  width: calc(50%);
+  height: 125px;
   box-sizing: border-box;
   font-size: 20px;
   text-align: left;
 
   .menu-item,
   .menu-open-button {
-    background: #ff4081;
+    background: #7178fc;
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -33,6 +39,8 @@ export const Menu = styled.nav`
     transition: -webkit-transform ease-out 200ms;
     transition: transform ease-out 200ms;
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+    border: 0;
+    cursor: pointer;
   }
 
   .menu-open {
@@ -86,7 +94,7 @@ export const Menu = styled.nav`
   .menu-item:hover {
     transition: background 0.3s;
     background: white;
-    color: #ff4081;
+    color: #7178fc;
   }
   .menu-item:nth-child(3) {
     -webkit-transition-duration: 70ms;

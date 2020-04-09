@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 import { Container, Card } from 'components/common';
 import starIcon from 'assets/icons/star.svg';
 import forkIcon from 'assets/icons/fork.svg';
@@ -7,8 +9,14 @@ import { Wrapper, Grid, Item, Content, Stats } from './styles';
 
 import api from '../../../services/api';
 
-export const Projects = () => {
+export const Projects = ({ language }) => {
   const [edges, setEdges] = useState([]);
+
+  const [lang, setLang] = useState('english');
+
+  useEffect(() => {
+    setLang(language || lang);
+  }, [lang, language]);
 
   useEffect(() => {
     async function loadGithub() {
@@ -24,7 +32,8 @@ export const Projects = () => {
 
   return (
     <Wrapper as={Container} id="pinned">
-      <h2>Top Starred Repositories</h2>
+      {lang === 'english' && <h2>Top Starred Repositories</h2>}
+      {lang === 'portuguese' && <h2>Repositórios Mais Favoritados</h2>}
       <Grid>
         {edges.map(node => (
           <Item key={node.id} as="a" href={node.html_url} target="_blank" rel="noopener noreferrer">
@@ -50,3 +59,11 @@ export const Projects = () => {
     </Wrapper>
   );
 };
+
+Projects.propTypes = {
+  language: PropTypes.string.isRequired,
+};
+
+export default connect(state => ({
+  language: state.portuguese,
+}))(Projects);
