@@ -25,7 +25,7 @@ function Skills({ language }) {
             <>
               <h1>Who I am</h1>
               <p>
-                Hello! My name is Leonardo Almeida, but you can call me Léu.z
+                Hello! My name is Leonardo Almeida, but you can call me Léu.
                 <br />
                 I’m 20 years old and I’m a tech enthusiast with a focus on front-end. Alongside this I also seek to
                 learn about back-end so I can become a full stack developer. I also have experience on audiovisual
