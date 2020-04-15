@@ -46,17 +46,11 @@ function Personal({ language }) {
           <CardInterests
             name="Freelances"
             subtitle={(lang === 'english' && 'available.') || (lang === 'portuguese' && 'disponível')}
-            submit={() => {
-              alert('Freela!');
-            }}
           />
           <CardInterests
             name={(lang === 'english' && 'In loco') || (lang === 'portuguese' && 'Alocado')}
             subtitle={(lang === 'english' && 'only to Germany.') || (lang === 'portuguese' && 'apenas Alemanha.')}
             cardNumber="card2"
-            submit={() => {
-              alert('Germany!');
-            }}
           />
         </InterestSection>
       </SkillsWrapper>
