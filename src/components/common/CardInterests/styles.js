@@ -72,7 +72,7 @@ export const CardContainer = styled.div`
     right: 75px;
     bottom: 25px;
     font-size: 40px;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
   & .card p {
     z-index: 99;
@@ -143,7 +143,7 @@ export const CardContainer = styled.div`
     background-color: #da4d1d;
     border: none;
     border-radius: 30px;
-    cursor: pointer;
+    /* cursor: pointer; */
     outline: none;
     transition: all 0.3s ease;
     mix-blend-mode: hard-light;
