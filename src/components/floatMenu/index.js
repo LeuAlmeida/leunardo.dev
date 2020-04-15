@@ -38,7 +38,7 @@ function FloatMenu(props) {
         return null;
       }
 
-      toast.success(`Bem-vindo ao meu site!`);
+      toast.success(`Agora você está na versão em português.`);
       setLang('portuguese');
     }
 
@@ -53,11 +53,11 @@ function FloatMenu(props) {
         return null;
       }
 
-      toast.success(`Welcome to my site!`);
+      toast.success(`Now you're in the English version.`);
       setLang('english');
     }
 
-    if (language === 'germany') {
+    if (language === 'german') {
       if (lang === 'english') {
         toast.error(`German translation doesn't available yet. 😓`);
         return null;
