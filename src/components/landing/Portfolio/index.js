@@ -45,6 +45,12 @@ function Portfolio({ language }) {
                 <SubTitle>Trabalhos Recentes</SubTitle>
               </>
             )}
+            {lang === 'german' && (
+              <>
+                <H2>Portfolio</H2>
+                <SubTitle>Letzte Jobs</SubTitle>
+              </>
+            )}
           </TitleWrapper>
           <FilterWrapper>
             {lang === 'english' && (
@@ -55,6 +61,11 @@ function Portfolio({ language }) {
             {lang === 'portuguese' && (
               <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
                 Todos
+              </FilterItem>
+            )}
+            {lang === 'german' && (
+              <FilterItem active={filter === 'all'} onClick={() => setFilter('all')}>
+                Alle
               </FilterItem>
             )}
             <FilterItem active={filter === 'frontend'} onClick={() => setFilter('frontend')}>
@@ -72,6 +83,11 @@ function Portfolio({ language }) {
             {lang === 'english' && (
               <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
                 Others
+              </FilterItem>
+            )}
+            {lang === 'german' && (
+              <FilterItem active={filter === 'others'} onClick={() => setFilter('others')}>
+                Andere
               </FilterItem>
             )}
             {lang === 'portuguese' && (
