@@ -32,6 +32,39 @@ export const jobs = {
       end: 'APR, 2015',
     },
   ],
+  german: [
+    {
+      title: 'Assistent des Front-End-Entwicklers',
+      description:
+        'Entwicklung von Webprojekten mit HTML5, CSS3, Javascript und Plone Sprachgebrauch, Produktion und Versand von Marketing Mail, Produktion und Versand von SMS Marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUN, 2019',
+      end: 'VORHANDEN',
+    },
+    {
+      title: 'Web Designer Intern',
+      description:
+        'Aktualisierung des Front-End Inhalts, Produktion und Versand von Marketing Mail, Produktion und Versand von SMS Marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUL, 2017',
+      end: 'JUN, 2019',
+    },
+    {
+      title: 'Webdesigner-Lehrling',
+      description: 'Produktion und Versand von Marketingpost, Produktion und Versand von SMS Marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUL, 2016',
+      end: 'JUN, 2017',
+    },
+    {
+      title: 'Auszubildender zum Verwaltungsassistenten',
+      description:
+        'Einsatz von internem CSM, Verwaltungsassistent zum Thema Satelliten-Tracking-Management, Zahlungskontrolle des Kunden.',
+      company: 'Insat Rastreadores',
+      start: 'APR, 2014',
+      end: 'APR, 2015',
+    },
+  ],
   portuguese: [
     {
       title: 'Assistente Desenvolvedor Front-End',
