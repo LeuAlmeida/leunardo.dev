@@ -43,6 +43,19 @@ function Footer({ language }) {
               por <a href="mailto:leo@webid.net.br">Léu Almeida</a>
             </span>
           )}
+          {lang === 'german' && (
+            <span>
+              © Urheberrechte {new Date().getFullYear()} | Gemacht mit{' '}
+              <span aria-label="love" role="img">
+                💖
+              </span>{' '}
+              und{' '}
+              <span aria-label="love" role="img">
+                ☕
+              </span>{' '}
+              von <a href="mailto:leo@webid.net.br">Léu Almeida</a>
+            </span>
+          )}
         </Details>
         <Links>
           <a href="https://github.com/LeuAlmeida" target="_blank" rel="noopener noreferrer" data-tip data-for="github">
