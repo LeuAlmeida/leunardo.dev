@@ -4,6 +4,8 @@ import ReactTooltip from 'react-tooltip';
 import { FaGithub, FaBehance, FaLinkedin, FaInstagram, FaFacebookF, FaFilePdf } from 'react-icons/fa';
 import useTypewriter from 'react-typewriter-hook';
 
+import PropTypes from 'prop-types';
+
 import { Header } from 'components/theme';
 import { Container, ButtonIcon } from 'components/common';
 import { Details } from 'components/common/Text';
@@ -134,6 +136,10 @@ function Intro({ language }) {
     </>
   );
 }
+
+Intro.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default connect(state => ({
   language: state.portuguese,
