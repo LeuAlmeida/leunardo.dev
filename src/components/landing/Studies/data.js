@@ -29,7 +29,7 @@ export const data = {
       color: 'red',
       dark: false,
       description:
-        'Introductory course about information technology and communication, that aims for the knowledge about hardware, network security notions, among other modules about the basic notios of ITC.',
+        'Introductory course about information technology and communication, that aims for the knowledge about hardware, network security notions, among other modules about the basic notions of ITC.',
       certificate: 'tic.pdf',
     },
     {
@@ -40,7 +40,7 @@ export const data = {
       color: 'green',
       dark: false,
       description:
-        'Introductory course about information technology and communication, that aims for the knowledge about hardware, network security notions, among other modules about the basic notios of ITC.',
+        'Online Course about the advanced notions of Search Engine Optimization, which is the optimization of content and development for a well-indexed website on the search engines (Google, Yahoo, Bing etc.)',
       certificate: 'seo.pdf',
     },
     {
@@ -151,7 +151,7 @@ export const data = {
       color: 'green',
       dark: false,
       description:
-        'Online Course about the advanced notions of Search Engine Optimization, which is the optimization of content and development for a well-indexed website on the search engines (Google, Yahoo, Bing etc.)',
+        'Curso on-line sobre as noções avançadas de Otimização de Mecanismos de Busca, que é a otimização de conteúdo e desenvolvimento para um site bem indexado nos mecanismos de busca (Google, Yahoo, Bing etc.)',
       certificate: 'seo.pdf',
     },
     {
@@ -218,6 +218,117 @@ export const data = {
       dark: false,
       description:
         'Curso intrudotório de Web Design em softwares como Macromedia Flash 8, Macromedia Fireworks 8, Macromedia Dreamweaver 8 - estes que posteriormente se tornariam Adobe - HTML Básico, CSS Básico.',
+      certificate: 'tic.pdf',
+    },
+  ],
+  german: [
+    {
+      name: 'Bachelorabschluss',
+      image: 'graduation.svg',
+      company: 'Universidade Metodista de São Paulo',
+      duration: 'Dezember 2020 (4 Jahre)',
+      color: 'orange',
+      dark: false,
+      description:
+        'Abschluss an der methodistischen Universität von São Paulo in Rudge Ramos - São Bernardo do Campo mit einer Dauer von 4 Jahren.',
+    },
+    {
+      name: 'Digital Marketing',
+      image: 'marketing.svg',
+      duration: 'Dezember 2018 (5 Stunden)',
+      company: 'Getulio Vargas Foundation',
+      color: 'blue',
+      dark: false,
+      description:
+        'Selbstinstitutioneller Online-Kurs der Getúlio Vargas Foundation, der die Grundlagen und Techniken des digitalen Marketings und seiner Anwendungen erklärt und lehrt.',
+      certificate: 'marketing-digital.pdf',
+    },
+    {
+      name: 'Informationstechnologie und Kommunikation',
+      image: 'tic.svg',
+      duration: 'Dezember 2018 (14 Stunden)',
+      company: 'SENAI',
+      color: 'red',
+      dark: false,
+      description:
+        'Einführungskurs über Informationstechnologie und Kommunikation, der auf das Wissen über Hardware, Netzwerksicherheitsbegriffe und andere Module über die Grundbegriffe von ITC abzielt.',
+      certificate: 'tic.pdf',
+    },
+    {
+      name: 'Suchmaschinenoptimierung (SEO)',
+      image: 'seo.svg',
+      company: 'Udemy von Ricardo Zacho',
+      duration: 'Dezember 2018 (5 Stunden)',
+      color: 'green',
+      dark: false,
+      description:
+        'Online-Kurs über die fortgeschrittenen Begriffe der Suchmaschinenoptimierung, dh die Optimierung von Inhalten und Entwicklung für eine gut indizierte Website in Suchmaschinen (Google, Yahoo, Bing usw.)',
+      certificate: 'seo.pdf',
+    },
+    {
+      name: 'Schnittstellen-Design',
+      image: 'interface.svg',
+      company: 'Udemy von Jamilton Damasceno +2',
+      duration: 'Dezember 2018 (15 Stunden)',
+      color: 'yellow',
+      dark: true,
+      description:
+        'Online-Kurs zur Verbesserung von Theorie und Praxis der Konzepte von UX- und UI-Design, Informationsarchitektur, Prototyping sowie Konzepte von Usability, Wireframes und Layouts, Organisationen und Navigationssystemen und vielem mehr.',
+      certificate: 'ux-ui.pdf',
+    },
+    {
+      name: 'Bootstrap 4',
+      image: 'bootstrap.svg',
+      company: 'Udemy von Ponto Kurse',
+      duration: 'Dezember 2018 (10,5 Stunden)',
+      color: 'purple',
+      dark: false,
+      description:
+        'Schließen Sie den Kurs eines der größten Open Source CSS-Frameworks ab. Erfahren Sie mehr über alle Funktionen und Optionen, die der Bootstrap dem Entwickler und dem Verbraucher bietet.',
+      certificate: 'bootstrap.pdf',
+    },
+    {
+      name: 'Tourismusüberwachung',
+      image: 'forma.svg',
+      company: 'Forma Turismo',
+      duration: 'Februar 2017 (40 Stunden)',
+      color: 'yellow',
+      dark: false,
+      description:
+        'Ein 40-stündiger Kurs konzentrierte sich auf die kommunikative Leistung des Tourismus. Mit neurolinguistischer Programmierung (NLP), verbaler und nonverbaler Kommunikation, unter anderem Techniken, die mit Kommunikation für die Öffentlichkeit arbeiten.',
+      certificate: 'tic.pdf',
+    },
+    {
+      name: 'After Effects',
+      image: 'after-effects-cc.svg',
+      company: 'Puflix',
+      duration: 'November 2017 (11 Stunden)',
+      color: 'purple',
+      dark: false,
+      description:
+        'Praktischer und theoretischer Kurs von After Effects CC, der 2017 online durchgeführt wurde, um das Wissen über Animation und professionelle Videobearbeitung zu verbessern.',
+      certificate: 'tic.pdf',
+    },
+    {
+      name: 'Computergrafik',
+      image: 'computer-graphic.svg',
+      company: 'SAGA',
+      duration: 'Oktober 2013 (3 Jahre)',
+      color: 'grey',
+      dark: false,
+      description:
+        'Professioneller Kurs für Computergrafik in Tatuapé (Ostseite von São Paulo) mit einer Dauer von 3 Jahren. Module für viele Software wie After Effects, Adobe Premiere, Dreamweaver, Fireworks, Photoshop, Autodesk Maya und digitale Maltechniken.',
+      certificate: 'tic.pdf',
+    },
+    {
+      name: 'Einführung in das Webdesign',
+      image: 'webdesign.svg',
+      company: 'Objetiva Schule',
+      duration: 'März 2010',
+      color: 'blue',
+      dark: false,
+      description:
+        'Einführungskurs in Webdesign in Software wie Macromedia Flash 8, Macromedia Fireworks 8 und Macromedia Dreamweaver 8, die schließlich zu Basic Adobe HTML und Basic CSS werden sollte.',
       certificate: 'tic.pdf',
     },
   ],
