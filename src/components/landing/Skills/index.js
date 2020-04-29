@@ -66,10 +66,6 @@ function Skills({ language }) {
                 <br />
               </p>
               <p>
-                Aus meiner Sicht sollten Proaktivität und Optimismus so nebeneinander gehen, dass auf einem entspannten
-                Arbeitsplatz großartige Ergebnisse erzielt werden.
-              </p>
-              <p>
                 Jetzt, wo du ein wenig über mich weißt,{' '}
                 <AnchorLink href="#contact">let lass uns einen Kaffee trinken?</AnchorLink>
               </p>
@@ -93,10 +89,6 @@ function Skills({ language }) {
                 Do meu ponto de vista, proatividade e otimismo devem caminhar lado a lado, de forma que se alcance
                 ótimos resultados em um ambiente de descontração.
                 <br />
-              </p>
-              <p>
-                From my perspective, proactivity and optimism should walk side by side in a way that great results are
-                achieved on a relaxed workspace.
               </p>
               <p>
                 Agora que você já me conhece um pouco, <AnchorLink href="#contact">vamos tomar um café?</AnchorLink>
