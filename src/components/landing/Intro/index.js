@@ -46,9 +46,11 @@ function Intro({ language }) {
 
             {lang === 'english' && <h4>I am {name}</h4>}
             {lang === 'portuguese' && <h4>Eu sou {name}</h4>}
+            {lang === 'german' && <h4>Ich bin {name}</h4>}
 
             {lang === 'english' && <h6>Stalk me in</h6>}
             {lang === 'portuguese' && <h6>Visita-me em</h6>}
+            {lang === 'german' && <h6>Verfolge mich</h6>}
 
             <SocialIcons>
               <ButtonIcon
