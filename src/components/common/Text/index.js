@@ -9,7 +9,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const H2 = styled.h2`
-  font-size: 32px;
+  font-size: 30px;
   color: #7178fc;
   margin-bottom: 0 !important;
 
