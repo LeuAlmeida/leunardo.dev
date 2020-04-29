@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Form, withFormik, FastField, ErrorMessage } from 'formik';
-import Recaptcha from 'react-google-recaptcha';
 import * as Yup from 'yup';
 import { Button, Input } from 'components/common';
-import { recaptcha_key } from 'data/config';
 import { Error, Center, InputField } from './styles';
 
 function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, language }) {
@@ -15,13 +13,7 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
   }, [lang, language]);
 
   return (
-    <Form
-      name="portfolio-dev"
-      method="post"
-      data-netlify="true"
-      data-netlify-recaptcha="true"
-      data-netlify-honeypot="bot-field"
-    >
+    <Form name="portfolio-dev" method="post">
       <InputField>
         <Input
           as={FastField}
@@ -69,17 +61,6 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
         />
         <ErrorMessage component={Error} name="message" />
       </InputField>
-      {values.name && values.email && values.message && (
-        <InputField>
-          <FastField
-            component={Recaptcha}
-            sitekey={recaptcha_key}
-            name="recaptcha"
-            onChange={value => setFieldValue('recaptcha', value)}
-          />
-          <ErrorMessage component={Error} name="recaptcha" />
-        </InputField>
-      )}
       {values.success && (
         <InputField>
           <Center>
@@ -103,7 +84,6 @@ const formikForm = withFormik({
     name: '',
     email: '',
     message: '',
-    recaptcha: '',
     success: false,
   }),
   validationSchema: () =>
@@ -113,9 +93,8 @@ const formikForm = withFormik({
         .email('Invalid email')
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('Robots are not welcome yet!'),
     }),
-  handleSubmit: async ({ name, email, message, recaptcha }, { setSubmitting, resetForm, setFieldValue }) => {
+  handleSubmit: async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
     try {
       const encode = data =>
         Object.keys(data)
@@ -129,7 +108,6 @@ const formikForm = withFormik({
           name,
           email,
           message,
-          'g-recaptcha-response': recaptcha,
         }),
       });
       await setSubmitting(false);
