@@ -112,7 +112,7 @@ function Studies({ language }) {
       {lang === 'german' && (
         <>
           <Details>
-            <h3>Cursos e Certificados</h3>
+            <h3>Kurse und Zertifikate</h3>
             <CardsSection>
               {data.german.map(item => (
                 <CardStudy
