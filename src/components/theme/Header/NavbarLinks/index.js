@@ -18,7 +18,7 @@ function NavbarLinks({ desktop, language }) {
     if (userlang === 'pt-BR' || userlang === 'pt') {
       currentLang = 'portuguese';
     } else if (userlang === 'de') {
-      currentLang = 'germany';
+      currentLang = 'german';
     } else {
       currentLang = 'english';
     }
@@ -61,14 +61,18 @@ function NavbarLinks({ desktop, language }) {
     }
 
     if (language === 'german') {
-      if (lang === 'english') {
-        toast.error(`German translation doesn't available yet. 😓`);
+      dispatch({
+        type: 'SET_LANGUAGE',
+        language,
+      });
+
+      if (lang === 'german') {
+        toast.info(`Du bist schon hier. 😜`);
         return null;
       }
-      if (lang === 'portuguese') {
-        toast.error(`O idioma alemão ainda não está disponível. 😓`);
-        return null;
-      }
+
+      toast.success(`Jetzt bist du in der deutschen Version.`);
+      setLang('german');
     }
   }
 
@@ -103,6 +107,24 @@ function NavbarLinks({ desktop, language }) {
           <AnchorLink href="#myself">Quem sou eu</AnchorLink>
           <AnchorLink href="#experience">Experiência</AnchorLink>
           <AnchorLink href="#contact">Contato</AnchorLink>
+          <button onClick={() => setAsLanguage('portuguese')} type="button">
+            🇧🇷
+          </button>
+          <button onClick={() => setAsLanguage('english')} type="button">
+            🇬🇧
+          </button>
+          <button onClick={() => setAsLanguage('german')} type="button">
+            🇩🇪
+          </button>
+        </>
+      )}
+      {lang === 'german' && (
+        <>
+          <AnchorLink href="#pinned">Repositories</AnchorLink>
+          <AnchorLink href="#portfolio">Portfolio</AnchorLink>
+          <AnchorLink href="#myself">Wer bin Ich</AnchorLink>
+          <AnchorLink href="#experience">Erfahrung</AnchorLink>
+          <AnchorLink href="#contact">Kontakt</AnchorLink>
           <button onClick={() => setAsLanguage('portuguese')} type="button">
             🇧🇷
           </button>
