@@ -59,7 +59,7 @@ function ImagePortfolio({ image, name, boldName, description, github, behance, u
         <span>Behance</span>
       </ReactTooltip>
       <ReactTooltip id="website" type="dark" effect="solid">
-        <span>Visit</span>
+        <span>Web View</span>
       </ReactTooltip>
       <ReactTooltip id="video" type="dark" effect="solid">
         <span>Watch</span>
