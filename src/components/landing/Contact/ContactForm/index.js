@@ -13,7 +13,8 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
   }, [lang, language]);
 
   return (
-    <Form name="portfolio-dev" method="post">
+    <Form name="portfolio-dev" method="post" netlify-honeypot="bot-field" data-netlify="true">
+      <input type="hidden" name="bot-field" />
       <InputField>
         <Input
           as={FastField}
@@ -64,7 +65,11 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
       {values.success && (
         <InputField>
           <Center>
-            <h4>Your message has been successfully sent, I will get back to you ASAP!</h4>
+            <h4 style={{ fontSize: 14, marginTop: 10 }}>
+              {lang === 'english' && 'Your message has been successfully sent, thank you!'}
+              {lang === 'portuguese' && 'Sua mensagem foi enviada com sucesso, obrigado!'}
+              {lang === 'german' && 'Ihre Nachricht wurde erfolgreich gesendet, danke!'}
+            </h4>
           </Center>
         </InputField>
       )}
@@ -100,7 +105,7 @@ const formikForm = withFormik({
         Object.keys(data)
           .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
           .join('&');
-      await fetch('/?no-cache=1', {
+      await fetch('https://leunardo.dev/form.php?no-cache=1', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode({
