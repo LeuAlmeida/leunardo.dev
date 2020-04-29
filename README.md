@@ -61,3 +61,7 @@ See [LICENSE](LICENSE.md) for details.
 <h3 align="center">
 <a href="http://linkedin.com/in/leonardoalmeida99">Connect me in LinkedIn</a> | <a href="http://behance.net/almeida99">See my Behance</a> | <a href="https://leunardo.dev">Click here to go to my CV</a>
 </h3>
+
+<p align="center">
+This portfolio was made from the <a href="https://github.com/smakosh/gatsby-portfolio-dev">Smakosh Template</a>. Thank you Smakosh! 💖
+</p>
