@@ -93,7 +93,7 @@ function Personal({ language }) {
           )}
           {lang === 'german' && (
             <>
-              <H2>Meineu i18n</H2>
+              <H2>Mein i18n</H2>
               <SubTitle>Wer bin Ich</SubTitle>
             </>
           )}
