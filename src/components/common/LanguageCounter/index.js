@@ -18,10 +18,12 @@ function LanguageCounter({ language }) {
         <Progress percent={100} active inverted success size="large">
           {lang === 'english' && 'Portuguese (Native)'}
           {lang === 'portuguese' && 'Português (Nativo)'}
+          {lang === 'german' && 'Portugiesisch (Muttersprache)'}
         </Progress>
         <Progress percent={75} inverted success size="large">
           {lang === 'english' && 'English (Intermediate / Advanced)'}
           {lang === 'portuguese' && 'Inglês (Intermediário / Avançado)'}
+          {lang === 'german' && 'Englisch (Mittelstufe / Fortgeschrittene)'}
         </Progress>
         <Progress percent={15} inverted warning size="large">
           {lang === 'english' && (
@@ -32,6 +34,11 @@ function LanguageCounter({ language }) {
           {lang === 'portuguese' && (
             <>
               Alemão (Básico) <CountPs>Intercambio em Julho</CountPs>
+            </>
+          )}
+          {lang === 'german' && (
+            <>
+              Deutsch (Basic) <CountPs>Austausch im Juli</CountPs>
             </>
           )}
         </Progress>
