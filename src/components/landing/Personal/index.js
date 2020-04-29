@@ -51,7 +51,11 @@ function Personal({ language }) {
             {lang === 'german' && <h3>Interessen</h3>}
           </Details>
           <CardInterests
-            name="Freelances"
+            name={
+              (lang === 'english' && 'Freelancer') ||
+              (lang === 'portuguese' && 'Freelances') ||
+              (lang === 'german' && 'Freiberufler')
+            }
             subtitle={
               (lang === 'english' && 'available.') ||
               (lang === 'portuguese' && 'disponível.') ||
