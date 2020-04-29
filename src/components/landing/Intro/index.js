@@ -42,6 +42,7 @@ function Intro({ language }) {
           <Details>
             {lang === 'english' && <h1>Hello, I'm Léu Almeida</h1>}
             {lang === 'portuguese' && <h1>Olá, sou o Léu Almeida</h1>}
+            {lang === 'german' && <h1>Hallo, ich bin Léu Almeida</h1>}
 
             {lang === 'english' && <h4>I am {name}</h4>}
             {lang === 'portuguese' && <h4>Eu sou {name}</h4>}
