@@ -34,6 +34,7 @@ export const Projects = ({ language }) => {
     <Wrapper as={Container} id="pinned">
       {lang === 'english' && <h2>Top Starred Repositories</h2>}
       {lang === 'portuguese' && <h2>Repositórios Mais Favoritados</h2>}
+      {lang === 'german' && <h2>Top Markierte Repositories</h2>}
       <Grid>
         {edges.map(node => (
           <Item key={node.id} as="a" href={node.html_url} target="_blank" rel="noopener noreferrer">
