@@ -29,7 +29,11 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
           name="name"
           component="input"
           aria-label="name"
-          placeholder={(lang === 'english' && 'Full name*') || (lang === 'portuguese' && 'Nome completo*')}
+          placeholder={
+            (lang === 'english' && 'Full name*') ||
+            (lang === 'portuguese' && 'Nome completo*') ||
+            (lang === 'german' && 'Vollständiger Name')
+          }
           error={touched.name && errors.name}
         />
         <ErrorMessage component={Error} name="name" />
@@ -42,7 +46,7 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
           as={FastField}
           type="email"
           name="email"
-          placeholder={(lang === 'english' && 'Email*') || (lang === 'portuguese' && 'E-mail*')}
+          placeholder={((lang === 'english' || lang === 'german') && 'Email*') || (lang === 'portuguese' && 'E-mail*')}
           error={touched.email && errors.email}
         />
         <ErrorMessage component={Error} name="email" />
@@ -56,7 +60,11 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
           rows="8"
           type="text"
           name="message"
-          placeholder={(lang === 'english' && 'Message*') || (lang === 'portuguese' && 'Mensagem*')}
+          placeholder={
+            (lang === 'english' && 'Message*') ||
+            (lang === 'portuguese' && 'Mensagem*') ||
+            (lang === 'german' && 'Botschaft*')
+          }
           error={touched.message && errors.message}
         />
         <ErrorMessage component={Error} name="message" />
@@ -83,6 +91,7 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
         <Button secondary type="submit" disabled={isSubmitting}>
           {lang === 'english' && 'Submit'}
           {lang === 'portuguese' && 'Enviar'}
+          {lang === 'german' && 'Einreichen'}
         </Button>
       </Center>
     </Form>
