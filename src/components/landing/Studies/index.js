@@ -60,6 +60,12 @@ function Studies({ language }) {
             <SubTitle>Estudos</SubTitle>
           </>
         )}
+        {lang === 'german' && (
+          <>
+            <H2>Hallo Welt</H2>
+            <SubTitle>Studien</SubTitle>
+          </>
+        )}
       </TitleWrapper>
       {lang === 'english' && (
         <>
@@ -88,6 +94,27 @@ function Studies({ language }) {
             <h3>Cursos e Certificados</h3>
             <CardsSection>
               {data.portuguese.map(item => (
+                <CardStudy
+                  key={item.name}
+                  name={item.name}
+                  image={item.image ? resolve(__dirname, 'svg', item.image) : null}
+                  company={item.company}
+                  duration={item.duration}
+                  color={item.color}
+                  description={item.description}
+                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                />
+              ))}
+            </CardsSection>
+          </Details>
+        </>
+      )}
+      {lang === 'german' && (
+        <>
+          <Details>
+            <h3>Cursos e Certificados</h3>
+            <CardsSection>
+              {data.german.map(item => (
                 <CardStudy
                   key={item.name}
                   name={item.name}
