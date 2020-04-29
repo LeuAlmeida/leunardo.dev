@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Progress } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 import { Container, CountPs } from './styles';
 
 import 'semantic-ui-css/semantic.min.css';
@@ -46,6 +47,10 @@ function LanguageCounter({ language }) {
     </>
   );
 }
+
+LanguageCounter.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 export default connect(state => ({
   language: state.portuguese,
