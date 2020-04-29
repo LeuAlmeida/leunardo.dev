@@ -72,7 +72,7 @@ function Portfolio({ language }) {
               Frontend
             </FilterItem>
             <FilterItem active={filter === 'mobile'} onClick={() => setFilter('mobile')}>
-              Mobile
+              {((lang === 'portuguese' || lang === 'english') && 'Mobile') || (lang === 'german' && 'Mobilgerät')}
             </FilterItem>
             <FilterItem active={filter === 'backend'} onClick={() => setFilter('backend')}>
               Backend
