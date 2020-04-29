@@ -32,6 +32,16 @@ function Blockquote({ language }) {
               </h5>
             </>
           )}
+          {lang === 'german' && (
+            <>
+              <h5>
+                <span style={{ color: '#ffffff' }}> Sie werden vielleicht nie wissen, welche</span> Ergebnisse kommen
+                von Ihren Handlungen
+                <span style={{ color: '#ffffff' }}>, aber wenn du nichts tust, wird es keine geben</span> Ergebnisse
+                <span style={{ color: '#ffffff' }}>.</span>
+              </h5>
+            </>
+          )}
           <h6>
             <em>Mahatma Gandhi</em>
           </h6>
