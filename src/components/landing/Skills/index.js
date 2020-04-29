@@ -47,6 +47,34 @@ function Skills({ language }) {
               </p>
             </>
           )}
+          {lang === 'german' && (
+            <>
+              <h1>Wer bin Ich</h1>
+              <p>
+                Hallo! Mein Name ist Leonardo Almeida, aber Sie können mich Léu nennen.
+                <br />
+                Ich bin 20 Jahre alt und ein Tech-Enthusiast mit Schwerpunkt auf Front-End. Daneben möchte ich auch
+                etwas über das Back-End lernen, damit ich ein Full-Stack-Entwickler werden kann. Ich habe auch Erfahrung
+                in der audiovisuellen Produktion, 3D-Modellierung und Grafikdesign für gelegentliche Bedürfnisse.
+                <br />
+                Ich bin seit einem Jahrzehnt in diesem Markt tätig, als ich erst 10 Jahre alt war und anfing, Basic HTML
+                zu studieren. Seitdem wurde mein Verlangen nach Lernen immer größer.
+                <br />
+                Meine Projekte konzentrieren sich auf die Benutzererfahrung und die Benutzerfreundlichkeit insgesamt und
+                zielen auf eine gute Beziehung zwischen Benutzer und Plattform ab - ob es sich um ein System oder eine
+                vollständige Website handelt.
+                <br />
+              </p>
+              <p>
+                Aus meiner Sicht sollten Proaktivität und Optimismus so nebeneinander gehen, dass auf einem entspannten
+                Arbeitsplatz großartige Ergebnisse erzielt werden.
+              </p>
+              <p>
+                Jetzt, wo du ein wenig über mich weißt,{' '}
+                <AnchorLink href="#contact">let lass uns einen Kaffee trinken?</AnchorLink>
+              </p>
+            </>
+          )}
           {lang === 'portuguese' && (
             <>
               <h1>Quem sou eu</h1>
