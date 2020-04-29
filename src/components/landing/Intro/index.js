@@ -125,7 +125,11 @@ function Intro({ language }) {
         <span>Facebook</span>
       </ReactTooltip>
       <ReactTooltip id="cv" type="dark" effect="solid">
-        <span>Curriculum</span>
+        <span>
+          {lang === 'english' && 'Curriculum'}
+          {lang === 'portuguese' && 'Currículo'}
+          {lang === 'german' && 'Lehrplan'}
+        </span>
       </ReactTooltip>
     </>
   );
