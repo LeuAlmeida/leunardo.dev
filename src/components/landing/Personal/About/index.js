@@ -26,6 +26,12 @@ function About({ language }) {
             <SubTitle>Pessoal</SubTitle>
           </>
         )}
+        {lang === 'german' && (
+          <>
+            <H2>Über Mich</H2>
+            <SubTitle>Persönlich</SubTitle>
+          </>
+        )}
       </TitleWrapper>
       <Details>
         {lang === 'english' && (
@@ -70,6 +76,7 @@ function About({ language }) {
             </TastesQuirksRow>
           </>
         )}
+
         {lang === 'portuguese' && (
           <>
             <h3>Gostos e Peculiariedades</h3>
@@ -108,6 +115,49 @@ function About({ language }) {
               <TasteOrQuirk>
                 <FaGamepad color="#333" size={64} />
                 <span>Jogos</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
+          </>
+        )}
+
+        {lang === 'german' && (
+          <>
+            <h3>Geschmack und Macken</h3>
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaCode color="#333" size={64} />
+                <span>Code</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaCoffee color="#333" size={64} />
+                <span>Kaffee</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaMusic color="#333" size={64} />
+                <span>Musik</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaTv color="#333" size={64} />
+                <span>Serie</span>
+              </TasteOrQuirk>
+            </TastesQuirksRow>
+
+            <TastesQuirksRow>
+              <TasteOrQuirk>
+                <FaDumbbell color="#333" size={64} />
+                <span>Trainieren</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaPencilRuler color="#333" size={64} />
+                <span>Studieren</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaBook color="#333" size={64} />
+                <span>Bücher</span>
+              </TasteOrQuirk>
+              <TasteOrQuirk>
+                <FaGamepad color="#333" size={64} />
+                <span>Spiele</span>
               </TasteOrQuirk>
             </TastesQuirksRow>
           </>
