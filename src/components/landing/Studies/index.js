@@ -42,7 +42,6 @@ function Studies({ language }) {
 
   useEffect(() => {
     setLang(language || lang);
-    console.log(language);
   }, [lang, language]);
 
   return (
