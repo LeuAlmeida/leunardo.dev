@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import cardFreela from '../../../assets/cards/freelance.jpg';
+import cardInLoco from '../../../assets/cards/in-loco.jpg';
+
 export const CardContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -93,8 +96,8 @@ export const CardContainer = styled.div`
     width: 80%;
     object-fit: cover;
     height: 200px;
-    background-image: url('https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80');
-    background-size: 100% 100%;
+    background-image: url(${cardFreela});
+    /* background-size: 100% 100%; */
     filter: grayscale(100%);
   }
   & .card .social {
@@ -161,7 +164,7 @@ export const CardContainer = styled.div`
     filter: grayscale(0);
   }
   & .card2 .pic {
-    background-image: url('https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80');
+    background-image: url(${cardInLoco});
   }
   & .card2 button {
     background-color: #2b26c3;
