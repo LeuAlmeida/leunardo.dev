@@ -9,6 +9,7 @@ export const data = {
       dark: false,
       description:
         'Intensive bootcamp promoted by Rocketseat on ReactJS, React Native and Node.js stacks with design patterns, database, TDD and more.',
+      certificate: 'bootcamp-gostack.pdf',
     },
     {
       name: "Bachelor's Degree",
@@ -130,6 +131,7 @@ export const data = {
       dark: false,
       description:
         'Bootcamp intensivo promovido pela Rocketseat nas stacks ReactJS, React Native e Node.js com design patterns, banco de dados, TDD e muito mais.',
+      certificate: 'bootcamp-gostack.pdf',
     },
     {
       name: 'Bacharelado em Publicidade e Propaganda',
@@ -251,6 +253,7 @@ export const data = {
       dark: false,
       description:
         'Intensives Bootcamp, das von Rocketseat auf ReactJS-, React Native- und Node.js-Stacks mit Designmustern, Datenbank, TDD und mehr beworben wird.',
+      certificate: 'bootcamp-gostack.pdf',
     },
     {
       name: 'Bachelorabschluss',
