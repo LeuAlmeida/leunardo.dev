@@ -29,17 +29,17 @@ function LanguageCounter({ language }) {
         <Progress percent={15} inverted warning size="large">
           {lang === 'english' && (
             <>
-              German (Basic) <CountPs>Exchange in July</CountPs>
+              German (Basic) <CountPs>Exchange in September</CountPs>
             </>
           )}
           {lang === 'portuguese' && (
             <>
-              Alemão (Básico) <CountPs>Intercambio em Julho</CountPs>
+              Alemão (Básico) <CountPs>Intercambio em Setembro</CountPs>
             </>
           )}
           {lang === 'german' && (
             <>
-              Deutsch (Basic) <CountPs>Austausch im Juli</CountPs>
+              Deutsch (Basic) <CountPs>Austausch im September</CountPs>
             </>
           )}
         </Progress>
