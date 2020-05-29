@@ -1,7 +1,7 @@
 export const data = {
   english: [
     {
-      name: 'Bootcamp GoStack 9',
+      name: 'GoStack Bootcamp 10',
       image: 'gostack.svg',
       company: 'Rocketseat',
       duration: 'May 2020 (6 months)',
@@ -123,7 +123,7 @@ export const data = {
   ],
   portuguese: [
     {
-      name: 'Bootcamp GoStack 9',
+      name: 'Bootcamp GoStack 10',
       image: 'gostack.svg',
       company: 'Rocketseat',
       duration: 'Maio de 2020 (6 meses)',
@@ -245,7 +245,7 @@ export const data = {
   ],
   german: [
     {
-      name: 'Bootcamp GoStack 9',
+      name: 'GoStack Bootcamp 10',
       image: 'gostack.svg',
       company: 'Rocketseat',
       duration: 'May 2020 (6 months)',

@@ -101,6 +101,11 @@ export const SkillCard = styled.div`
     -webkit-transition-delay: 1.5s;
     transition-delay: 1.5s;
   }
+  & .dark {
+    background-color: #222;
+    border-radius: 4px;
+    padding: 5px;
+  }
   & .grey {
     background-color: #666;
     border-radius: 4px;
