@@ -1,6 +1,16 @@
 export const data = {
   english: [
     {
+      name: 'Bootcamp GoStack 9',
+      image: 'gostack.svg',
+      company: 'Rocketseat',
+      duration: 'May 2020 (6 months)',
+      color: 'dark',
+      dark: false,
+      description:
+        'Intensive bootcamp promoted by Rocketseat on ReactJS, React Native and Node.js stacks with design patterns, database, TDD and more.',
+    },
+    {
       name: "Bachelor's Degree",
       image: 'graduation.svg',
       company: 'Universidade Metodista de São Paulo',
@@ -112,6 +122,16 @@ export const data = {
   ],
   portuguese: [
     {
+      name: 'Bootcamp GoStack 9',
+      image: 'gostack.svg',
+      company: 'Rocketseat',
+      duration: 'Maio de 2020 (6 meses)',
+      color: 'dark',
+      dark: false,
+      description:
+        'Bootcamp intensivo promovido pela Rocketseat nas stacks ReactJS, React Native e Node.js com design patterns, banco de dados, TDD e muito mais.',
+    },
+    {
       name: 'Bacharelado em Publicidade e Propaganda',
       image: 'graduation.svg',
       company: 'Universidade Metodista de São Paulo',
@@ -222,6 +242,16 @@ export const data = {
     },
   ],
   german: [
+    {
+      name: 'Bootcamp GoStack 9',
+      image: 'gostack.svg',
+      company: 'Rocketseat',
+      duration: 'May 2020 (6 months)',
+      color: 'dark',
+      dark: false,
+      description:
+        'Intensives Bootcamp, das von Rocketseat auf ReactJS-, React Native- und Node.js-Stacks mit Designmustern, Datenbank, TDD und mehr beworben wird.',
+    },
     {
       name: 'Bachelorabschluss',
       image: 'graduation.svg',
