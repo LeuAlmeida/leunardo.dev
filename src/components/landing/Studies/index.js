@@ -80,7 +80,7 @@ function Studies({ language }) {
                   duration={item.duration}
                   color={item.color}
                   description={item.description}
-                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                  certificate={item.certificate ? resolve(__dirname, 'certificates', item.certificate) : null}
                 />
               ))}
             </CardsSection>
@@ -101,7 +101,7 @@ function Studies({ language }) {
                   duration={item.duration}
                   color={item.color}
                   description={item.description}
-                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                  certificate={item.certificate ? resolve(__dirname, 'certificates', item.certificate) : null}
                 />
               ))}
             </CardsSection>
@@ -122,7 +122,7 @@ function Studies({ language }) {
                   duration={item.duration}
                   color={item.color}
                   description={item.description}
-                  certificate={item.certificate ? resolve(__dirname, 'assets', 'certificates', item.certificate) : null}
+                  certificate={item.certificate ? resolve(__dirname, 'certificates', item.certificate) : null}
                 />
               ))}
             </CardsSection>
@@ -145,4 +145,8 @@ CardStudy.propTypes = {
   description: PropTypes.string,
   certificate: PropTypes.string,
   dark: PropTypes.bool,
+};
+
+Studies.propTypes = {
+  language: PropTypes.string.isRequired,
 };
