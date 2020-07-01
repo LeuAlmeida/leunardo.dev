@@ -1,12 +1,20 @@
 export const jobs = {
   english: [
     {
+      title: 'Front End Developer',
+      description:
+        'Development of education network projects; Exercise functions in order to web projects using Plone; CMS with HTML5 and CSS3, and full stack projects; Developments with Node.js, ReactJS and React Native; Production and dispatching of marketing mail; Production and dispatching of SMS marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUN, 2020',
+      end: 'PRESENT',
+    },
+    {
       title: 'Assistant Front End Developer',
       description:
         'Development of Web Projects with HTML, CSS3, Javascript and Plone language use, Production and dispatching of marketing mail, Production and dispatching of SMS marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2019',
-      end: 'PRESENT',
+      end: 'JUN, 2020',
     },
     {
       title: 'Web Designer Intern',
@@ -34,12 +42,20 @@ export const jobs = {
   ],
   german: [
     {
+      title: 'Frontend-Entwickler',
+      description:
+        'Entwicklung von Bildungsnetzwerkprojekten; Übungsfunktionen zum Weben von Projekten mit Plone; CMS mit HTML5 und CSS3 sowie Full-Stack-Projekte; Entwicklungen mit Node.js, ReactJS und React Native; Produktion und Versand von Marketingpost; Produktion und Versand von SMS-Marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUN, 2020',
+      end: 'VORHANDEN',
+    },
+    {
       title: 'Assistent des Front-End-Entwicklers',
       description:
         'Entwicklung von Webprojekten mit HTML5, CSS3, Javascript und Plone Sprachgebrauch, Produktion und Versand von Marketing Mail, Produktion und Versand von SMS Marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2019',
-      end: 'VORHANDEN',
+      end: 'JUN, 2020',
     },
     {
       title: 'Web Designer Intern',
@@ -67,12 +83,20 @@ export const jobs = {
   ],
   portuguese: [
     {
+      title: 'Analista Desenvolvedor Front End Pleno',
+      description:
+        'Desenvolvimento de projetos de redes educacionais; Exercício de funções para projetos web usando Plone; CMS com HTML5 e CSS3 e projetos de pilha cheia; Desenvolvimentos com Node.js, ReactJS e React Native; Produção e expedição de correio de marketing; Produção e expedição de SMS marketing.',
+      company: 'Universidade Metodista de São Paulo',
+      start: 'JUN, 2020',
+      end: 'ATUAL',
+    },
+    {
       title: 'Assistente Desenvolvedor Front-End',
       description:
         'Desenvolvimento de projetos web com o uso de linguagens como HTML5, CSS3, JavaScript e Plone; Criação e disparo de e-mail marketing; Criação e envio de SMS marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2019',
-      end: 'ATUAL',
+      end: 'JUN, 2020',
     },
     {
       title: 'Estagiário Web Designer',
