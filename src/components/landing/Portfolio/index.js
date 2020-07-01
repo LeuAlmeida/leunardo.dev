@@ -109,7 +109,7 @@ function Portfolio({ language }) {
                   name={item.name}
                   behance={item.behance}
                   github={item.github}
-                  vide={item.video}
+                  video={item.video}
                   url={item.url}
                   image={item.image}
                 />
