@@ -35,9 +35,9 @@ function Blockquote({ language }) {
           {lang === 'german' && (
             <>
               <h5>
-                <span style={{ color: '#ffffff' }}> Sie werden vielleicht nie wissen, welche</span> Ergebnisse kommen
-                von Ihren Handlungen
-                <span style={{ color: '#ffffff' }}>, aber wenn du nichts tust, wird es keine geben</span> Ergebnisse
+                <span style={{ color: '#ffffff' }}> Sie werden vielleicht nie wissen, welche</span> Ergebnisse von Ihren
+                Handlungen kommen,
+                <span style={{ color: '#ffffff' }}>, aber wenn Sie nichts tun, wird es keine</span> Ergebnisse geben.
                 <span style={{ color: '#ffffff' }}>.</span>
               </h5>
             </>
