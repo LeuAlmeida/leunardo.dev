@@ -37,7 +37,7 @@ function Blockquote({ language }) {
               <h5>
                 <span style={{ color: '#ffffff' }}> Sie werden vielleicht nie wissen, welche</span> Ergebnisse von Ihren
                 Handlungen kommen,
-                <span style={{ color: '#ffffff' }}>, aber wenn Sie nichts tun, wird es keine</span> Ergebnisse geben.
+                <span style={{ color: '#ffffff' }}>, aber wenn Sie nichts tun, wird es keine</span> Ergebnisse geben
                 <span style={{ color: '#ffffff' }}>.</span>
               </h5>
             </>
