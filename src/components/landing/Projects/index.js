@@ -9,7 +9,7 @@ import { Wrapper, Grid, Item, Content, Stats } from './styles';
 
 import api from '../../../services/api';
 
-export const Projects = ({ language }) => {
+const Projects = ({ language }) => {
   const [edges, setEdges] = useState([]);
 
   const [lang, setLang] = useState('english');
@@ -20,7 +20,7 @@ export const Projects = ({ language }) => {
 
   useEffect(() => {
     async function loadGithub() {
-      const response = await api.get('/users/LeuAlmeida/repos');
+      const response = await api.get('/users/LeuAlmeida/repos?per_page=150');
 
       const data = response.data.sort((a, b) => (a.stargazers_count > b.stargazers_count ? -1 : 1)).slice(0, 6);
 
