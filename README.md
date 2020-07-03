@@ -1,29 +1,26 @@
-<!-- <p align="center">
-<img alt="Léu ALmeida" src="logo.png" />
-</p> -->
+<p align="center">
+<img alt="Léu Almeida" width="350" src=".github/logo.png" />
+</p>
 
-<h1 align="center">Léu Almeida | Personal Portfolio</h1>
+<h1 align="center">Personal Portfolio</h1>
 
-<!-- <blockquote align="center">
-:zap: ReactJS application to obtain the GoStack bootcamp certify
-</blockquote> -->
+<blockquote align="center">
+My personal website. Practical and fun, it looks like me 👀
+</blockquote>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LeuAlmeida/leunardo.dev?color=%2304D361">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%237159c1">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LeuAlmeida/leunardo.dev?color=%237159c1">
 
   <a href="https://leunardo.dev">
-    <img alt="Made by Léu Almeida" src="https://img.shields.io/badge/made%20by-Léu%20Almeida-%2304D361">
+    <img alt="Made by Léu Almeida" src="https://img.shields.io/badge/made%20by-Léu%20Almeida-%237159c1">
   </a>
 </p>
 
-<!-- <p align="center">
-<img alt="Léu Almeida Portfolio - Presentation" src="./presentation-app.png" />
-</p> -->
-
-## Introduction
-
-<!-- [Fastfeet](https://github.com/LeuAlmeida/fastfeet-app) is a fictitious logistic company and this repository belong to the business logic and is the basis of a general structure and all of this be a part of the [Rocketseat bootcamp](https://github.com/rocketseat) certify.
-This application is based on the [Fastfeet API](https://github.com/LeuAlmeida/fastfeet.api) and the [Fastfeet Web Application](https://github.com/LeuAlmeida/fastfeet-web) previously developed. -->
+<p align="center">
+<img alt="Léu Almeida Portfolio - Presentation" width="800" src=".github/presentation.png" />
+</p>
 
 ## :electric_plug: Prerequisites
 
@@ -58,10 +55,10 @@ See [LICENSE](LICENSE.md) for details.
 
 <hr/>
 
-<h3 align="center">
+<h4 align="center">
 <a href="http://linkedin.com/in/leonardoalmeida99">Connect me in LinkedIn</a> | <a href="http://behance.net/almeida99">See my Behance</a> | <a href="https://leunardo.dev">Click here to go to my CV</a>
-</h3>
+</h4>
 
 <p align="center">
-This portfolio was made from the <a href="https://github.com/smakosh/gatsby-portfolio-dev">Smakosh Template</a>. Thank you Smakosh! 💖
+This portfolio was made from the <a href="https://github.com/smakosh/gatsby-portfolio-dev"><b>Gatsby Portfolio Dev Template</b></a>. Thank you Smakosh! 💖
 </p>
