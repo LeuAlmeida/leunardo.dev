@@ -71,3 +71,7 @@ yarn-error.log
 .yarn-integrity
 
 now.json
+
+#Lockfiles
+package-lock.json
+yarn.lock
