@@ -41,7 +41,7 @@ function ProfessionalXp({ language }) {
           {lang === 'german' && <h3>Berufserfahrung</h3>}
           <div className="box">
             <ul id="first-list">
-              <Timeline
+              {/* <Timeline
                 title={
                   (lang === 'english' && 'Opportunity in Germany') ||
                   (lang === 'portuguese' && 'Oportunidade na Alemanha') ||
@@ -57,7 +57,7 @@ function ProfessionalXp({ language }) {
                 }
                 supEnd=""
                 future
-              />
+              /> */}
               {lang === 'english' &&
                 jobs.english.map(job => (
                   <Timeline
