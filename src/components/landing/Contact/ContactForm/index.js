@@ -2,15 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Form, withFormik, FastField, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Button, Input } from 'components/common';
 import { Error, Center, InputField } from './styles';
 
 function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, language }) {
   const [lang, setLang] = useState('english');
+  const [captcha, setCaptcha] = useState();
 
   useEffect(() => {
     setLang(language || lang);
   }, [lang, language]);
+
+  const handleSetCaptcha = value => {
+    console.log('Captcha value:', value);
+  };
 
   return (
     <Form name="portfolio-dev" method="post" netlify-honeypot="bot-field" data-netlify="true">
@@ -62,6 +68,7 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
         />
         <ErrorMessage component={Error} name="message" />
       </InputField>
+      <ReCAPTCHA sitekey="6LcaQrIZAAAAAOAo1aDXTTcTzAqyjwhup0pjiYQl" onChange={handleSetCaptcha} />
       {values.success && (
         <InputField>
           <Center>
