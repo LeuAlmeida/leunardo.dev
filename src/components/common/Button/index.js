@@ -14,6 +14,7 @@ export const Button = styled.button`
   user-select: none;
   color: #fff;
   background: #7078fc;
+  margin-top: 10px;
 
   &:focus {
     outline: none;
