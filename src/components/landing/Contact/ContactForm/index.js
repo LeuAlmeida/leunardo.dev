@@ -6,17 +6,14 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { Button, Input } from 'components/common';
 import { Error, Center, InputField } from './styles';
 
+let captcha;
+
 function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, language }) {
   const [lang, setLang] = useState('english');
-  const [captcha, setCaptcha] = useState();
 
   useEffect(() => {
     setLang(language || lang);
   }, [lang, language]);
-
-  const handleSetCaptcha = value => {
-    console.log('Captcha value:', value);
-  };
 
   return (
     <Form name="portfolio-dev" method="post" netlify-honeypot="bot-field" data-netlify="true">
@@ -68,7 +65,15 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
         />
         <ErrorMessage component={Error} name="message" />
       </InputField>
-      <ReCAPTCHA sitekey="6LcaQrIZAAAAAOAo1aDXTTcTzAqyjwhup0pjiYQl" onChange={handleSetCaptcha} />
+      <ReCAPTCHA
+        sitekey="6LcaQrIZAAAAAOAo1aDXTTcTzAqyjwhup0pjiYQl"
+        onChange={value => {
+          captcha = value;
+        }}
+        id="recaptcha"
+        arial-abel="recaptcha"
+        name="recaptcha"
+      />
       {values.success && (
         <InputField>
           <Center>
@@ -105,30 +110,33 @@ const formikForm = withFormik({
         .email('Invalid email')
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
+      recaptcha: Yup.string().required('ReCaptcha is required'),
     }),
   handleSubmit: async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
     try {
-      const encode = data =>
-        Object.keys(data)
-          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-          .join('&');
-      await fetch('https://leunardo.dev/form.php?no-cache=1', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'portfolio-dev',
-          name,
-          email,
-          message,
-        }),
-      });
-      await setSubmitting(false);
-      await setFieldValue('success', true);
-      setTimeout(() => resetForm(), 2000);
+      if (captcha !== null && captcha !== undefined && captcha.length > 1) {
+        const encode = data =>
+          Object.keys(data)
+            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+            .join('&');
+        await fetch('https://leunardo.dev/form.php?no-cache=1', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: encode({
+            'form-name': 'portfolio-dev',
+            name,
+            email,
+            message,
+          }),
+        });
+        await setSubmitting(false);
+        await setFieldValue('success', true);
+        setTimeout(() => resetForm(), 2000);
+      }
     } catch (err) {
       setSubmitting(false);
       setFieldValue('success', false);
-			alert('Something went wrong, please try again!') // eslint-disable-line
+      alert('Something went wrong, please try again!') // eslint-disable-line
     }
   },
 })(ContactForm);
