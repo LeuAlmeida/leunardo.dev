@@ -1,12 +1,20 @@
 export const jobs = {
   english: [
     {
+      title: 'Fullstack Developer',
+      description:
+        'Development and maintenance of fullstack applications for the health area, focused on the telemedicine area of the Albert Einstein Hospital.',
+      company: 'Hospital Israelita Albert Einstein',
+      start: 'JUL, 2020',
+      end: 'PRESENT',
+    },
+    {
       title: 'Front End Developer',
       description:
         'Development of education network projects; Exercise functions in order to web projects using Plone; CMS with HTML5 and CSS3, and full stack projects; Developments with Node.js, ReactJS and React Native; Production and dispatching of marketing mail; Production and dispatching of SMS marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2020',
-      end: 'PRESENT',
+      end: 'JUL, 2020',
     },
     {
       title: 'Assistant Front End Developer',
@@ -42,12 +50,20 @@ export const jobs = {
   ],
   german: [
     {
+      title: 'Full Stack Entwickler',
+      description:
+        'Entwicklung und Wartung von Fullstack-Anwendungen für den Gesundheitsbereich mit Schwerpunkt auf dem Bereich Telemedizin des Albert-Einstein-Krankenhauses.',
+      company: 'Krankenhaus Israelita Albert Einstein',
+      start: 'JUL, 2020',
+      end: 'VORHANDEN',
+    },
+    {
       title: 'Frontend-Entwickler',
       description:
         'Entwicklung von Bildungsnetzwerkprojekten; Übungsfunktionen zum Weben von Projekten mit Plone; CMS mit HTML5 und CSS3 sowie Full-Stack-Projekte; Entwicklungen mit Node.js, ReactJS und React Native; Produktion und Versand von Marketingpost; Produktion und Versand von SMS-Marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2020',
-      end: 'VORHANDEN',
+      end: 'JUL, 2020',
     },
     {
       title: 'Assistent des Front-End-Entwicklers',
@@ -83,12 +99,20 @@ export const jobs = {
   ],
   portuguese: [
     {
+      title: 'Desenvolvedor Fullstack Pleno II',
+      description:
+        'Desenvolvimento e manutenção de aplicações fullstack para a área de saúde, voltado para a área de telemedicina do Hospital Albert Einstein.',
+      company: 'Hospital Israelita Albert Einstein',
+      start: 'JUL, 2020',
+      end: 'ATUAL',
+    },
+    {
       title: 'Analista Desenvolvedor Front End Pleno',
       description:
         'Desenvolvimento de projetos de redes educacionais; Exercício de funções para projetos web usando Plone; CMS com HTML5 e CSS3 e projetos de pilha cheia; Desenvolvimentos com Node.js, ReactJS e React Native; Produção e expedição de correio de marketing; Produção e expedição de SMS marketing.',
       company: 'Universidade Metodista de São Paulo',
       start: 'JUN, 2020',
-      end: 'ATUAL',
+      end: 'JUL, 2020',
     },
     {
       title: 'Assistente Desenvolvedor Front-End',
