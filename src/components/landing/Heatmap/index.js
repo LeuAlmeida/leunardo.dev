@@ -13,7 +13,7 @@ const Heatmap = ({ language }) => {
   }, [lang, language]);
 
   return (
-    <Wrapper as={Container} id="pinned">
+    <Wrapper as={Container} id="heatmap">
       {lang === 'english' && <h2>Github Code Frequency</h2>}
       {lang === 'portuguese' && <h2>Frequência no Github</h2>}
       {lang === 'german' && <h2>Github-Code-Frequenz</h2>}
