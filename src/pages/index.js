@@ -7,6 +7,7 @@ import FloatMenu from 'components/floatMenu';
 import Intro from '../components/landing/Intro';
 import Portfolio from '../components/landing/Portfolio';
 import Projects from '../components/landing/Projects';
+import Heatmap from '../components/landing/Heatmap';
 import Personal from '../components/landing/Personal';
 import Skills from '../components/landing/Skills';
 import Studies from '../components/landing/Studies';
@@ -25,6 +26,7 @@ export default () => (
       <FloatMenu />
       <Intro />
       <Projects />
+      <Heatmap />
       <Portfolio />
       <Skills />
       <Personal />
