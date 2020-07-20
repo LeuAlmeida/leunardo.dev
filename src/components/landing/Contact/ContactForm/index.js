@@ -4,6 +4,7 @@ import { Form, withFormik, FastField, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Button, Input } from 'components/common';
+import { toast } from 'react-toastify';
 import { Error, Center, InputField } from './styles';
 
 let captcha;
@@ -70,9 +71,6 @@ function ContactForm({ setFieldValue, isSubmitting, values, errors, touched, lan
         onChange={value => {
           captcha = value;
         }}
-        id="recaptcha"
-        arial-abel="recaptcha"
-        name="recaptcha"
       />
       {values.success && (
         <InputField>
@@ -110,15 +108,14 @@ const formikForm = withFormik({
         .email('Invalid email')
         .required('Email field is required'),
       message: Yup.string().required('Message field is required'),
-      recaptcha: Yup.string().required('ReCaptcha is required'),
     }),
   handleSubmit: async ({ name, email, message }, { setSubmitting, resetForm, setFieldValue }) => {
     try {
+      const encode = data =>
+        Object.keys(data)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+          .join('&');
       if (captcha !== null && captcha !== undefined && captcha.length > 1) {
-        const encode = data =>
-          Object.keys(data)
-            .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
-            .join('&');
         await fetch('https://leunardo.dev/form.php?no-cache=1', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -132,6 +129,10 @@ const formikForm = withFormik({
         await setSubmitting(false);
         await setFieldValue('success', true);
         setTimeout(() => resetForm(), 2000);
+      } else {
+        await setSubmitting(false);
+        await setFieldValue('errro', false);
+        return toast.error('Erro. ReCaptcha inválido.');
       }
     } catch (err) {
       setSubmitting(false);
