@@ -13,7 +13,9 @@ import { Details } from 'components/common/Text';
 import dev from 'assets/vector/vector-top.svg';
 import { Wrapper, IntroWrapper, Thumbnail, SocialIcons } from './styles';
 
-const MagicOcean = ['Backend Developer', 'UX & UI Designer'];
+const MagicOceanEn = ['Backend Developer', 'UX & UI Designer'];
+const MagicOceanPt = ['Desenvolvedor Backend', 'UX & UI Designer'];
+const MagicOceanDe = ['Backend-Entwickler', 'UX & UI Designer'];
 let index = 0;
 
 function Intro({ language }) {
@@ -23,13 +25,34 @@ function Intro({ language }) {
     setLang(language || lang);
   }, [lang, language]);
 
-  const [magicName, setMagicName] = useState('Frontend Developer');
+  const [initialMagicName, setInitialMagicName] = useState('Frontend Developer')
+
+  useEffect(() => {
+    if (lang === 'portuguese') {
+      setInitialMagicName('Desenvolvedor Frontend')
+    } else if (lang === 'english') {
+      setInitialMagicName('Frontend Developer')
+    } else if (lang === 'german') {
+      setInitialMagicName('Frontend-Entwickler')
+    }
+  }, [lang])
+
+  const [magicName, setMagicName] = useState(initialMagicName);
   const intervalRef = useRef({});
   const name = useTypewriter(magicName);
+
   useEffect(() => {
     intervalRef.current = setInterval(() => {
-      index = index > 2 ? 0 : +index;
-      setMagicName(MagicOcean[index]);
+      index = index > 1 ? 0 : index + 1;
+
+      if (lang === 'english') {
+        setMagicName(MagicOceanEn[index]);
+      } else if (lang === 'portuguese') {
+        setMagicName(MagicOceanPt[index]);
+      } else if (lang === 'german') {
+        setMagicName(MagicOceanDe[index]);
+      }
+
     }, 5000);
     return function clear() {
       clearInterval(intervalRef.current);
