@@ -47,6 +47,16 @@ $ yarn start
 
 ```
 
+<hr/>
+
+## ToDo
+
+- [ ] Implement extra certificates field
+  - [ ] Templates:
+    - [ ] https://codepen.io/milesmanners/pen/QEQPjw
+  - [ ] Certificates:
+    - [ ] http://image.xpnews.com.br/lib/fe8e1372726c007875/m/14/14a424e8-8a41-4238-89e1-0c70b3d9c268.jpg
+
 ## :copyright: License
 
 MIT License.
