@@ -4,7 +4,7 @@ export const jobs = {
       title: 'Fullstack Developer',
       description:
         'Development and maintenance of fullstack applications for the health area, focused on the telemedicine area of the Albert Einstein Hospital.',
-      company: 'Hospital Israelita Albert Einstein',
+      company: 'ACT Digital - Responding to Hospital Israelita Albert Einstein',
       start: 'JUL, 2020',
       end: 'PRESENT',
     },
@@ -53,7 +53,7 @@ export const jobs = {
       title: 'Full Stack Entwickler',
       description:
         'Entwicklung und Wartung von Fullstack-Anwendungen für den Gesundheitsbereich mit Schwerpunkt auf dem Bereich Telemedizin des Albert-Einstein-Krankenhauses.',
-      company: 'Krankenhaus Israelita Albert Einstein',
+      company: 'ACT Digital - Antwort auf das Krankenhaus Israelita Albert Einstein',
       start: 'JUL, 2020',
       end: 'VORHANDEN',
     },
@@ -102,7 +102,7 @@ export const jobs = {
       title: 'Desenvolvedor Fullstack Pleno II',
       description:
         'Desenvolvimento e manutenção de aplicações fullstack para a área de saúde, voltado para a área de telemedicina do Hospital Albert Einstein.',
-      company: 'Hospital Israelita Albert Einstein',
+      company: 'ACT Digital - Respondendo ao Hospital Israelita Albert Einstein',
       start: 'JUL, 2020',
       end: 'ATUAL',
     },
