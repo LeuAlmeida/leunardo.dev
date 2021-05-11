@@ -27,7 +27,7 @@ function Skills({ language }) {
               <p>
                 Hello! My name is Leonardo Almeida, but you can call me Léu.
                 <br />
-                I’m 20 years old and I’m a tech enthusiast with a focus on front-end. Alongside this I also seek to
+                I’m 21 years old and I’m a tech enthusiast with a focus on front-end. Alongside this I also seek to
                 learn about back-end so I can become a full stack developer. I also have experience on audiovisual
                 production, 3D modeling and Graphic Design for occasional needs.
                 <br />
@@ -53,7 +53,7 @@ function Skills({ language }) {
               <p>
                 Hallo! Mein Name ist Leonardo Almeida, aber Sie können mich Léu nennen.
                 <br />
-                Ich bin 20 Jahre alt und ein Tech-Enthusiast mit Schwerpunkt auf Front-End. Daneben möchte ich auch
+                Ich bin 21 Jahre alt und ein Tech-Enthusiast mit Schwerpunkt auf Front-End. Daneben möchte ich auch
                 etwas über das Back-End lernen, damit ich ein Full-Stack-Entwickler werden kann. Ich habe auch Erfahrung
                 in der audiovisuellen Produktion, 3D-Modellierung und Grafikdesign für gelegentliche Bedürfnisse.
                 <br />
@@ -77,7 +77,7 @@ function Skills({ language }) {
               <p>
                 Olá! Me chamo Leonardo Almeida, mas pode me chamar de Léu.
                 <br />
-                Tenho 20 anos e sou um entusiasta da tecnologia, com foco em front-end. Busco, em paralelo, conhecimento
+                Tenho 21 anos e sou um entusiasta da tecnologia, com foco em front-end. Busco, em paralelo, conhecimento
                 na parte de back-end, para que eu consiga me tornar um desenvolvedor full stack. Também tenho
                 experiência com produção audiovisual, design gráfico e modelagem 3D para eventuais necessidades.
                 <br />
