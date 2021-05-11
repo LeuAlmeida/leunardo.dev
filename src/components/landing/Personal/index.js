@@ -58,7 +58,7 @@ function Personal({ language }) {
             }
             subtitle={
               (lang === 'english' && 'available.') ||
-              (lang === 'portuguese' && 'disponível.') ||
+              (lang === 'portuguese' && 'indisponível.') ||
               (lang === 'german' && 'verfügbar.')
             }
           />
@@ -69,9 +69,9 @@ function Personal({ language }) {
               (lang === 'german' && 'In der Lok')
             }
             subtitle={
-              (lang === 'english' && 'only to Germany.') ||
-              (lang === 'portuguese' && 'apenas Alemanha.') ||
-              (lang === 'german' && 'nur nach Deutschland.')
+              (lang === 'english' && 'indisponível.') ||
+              (lang === 'portuguese' && 'unavailable.') ||
+              (lang === 'german' && 'nicht verfügbar.')
             }
             cardNumber="card2"
           />
